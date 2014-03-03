@@ -1,9 +1,10 @@
-* ==System Specification and Requirement==
-# Log in
-# Home Page
-# Ordering Menu
-# Food Recommendation
-# Preferences
-# Ranking
-# User Profile
-# Tools
+==System Specification and Requirement==
+
+ # Log in
+ # Home Page
+ # Ordering Menu
+ # Food Recommendation
+ # Preferences
+ # Ranking
+ # User Profile
+ # Tools
