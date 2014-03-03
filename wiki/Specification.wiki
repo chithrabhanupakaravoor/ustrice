@@ -39,6 +39,12 @@
       # While in this page, there is a floating dialog box at the bottom which will show the order users have made temperately but not paid yet.
 
    * Food Page:
+      # By clicking on the foods in the list page, details of the food selected will be given.
+      # On the top left corner, a “Back” button is for returning to the previous page, i.e. the list page.
+      # Picture of the food and basic information of it, the four types in the menu page, will be shown on the next row, with picture on the left and information on the right.
+      # Nutrition value such as carbohydrates, fats, proteins, calories, fibre, etc. will be shown below of the picture.
+      # Under it, there is the rating and comments of this food which users of this app give.
+      # Three buttons are on the bottom of this page, from left to right, is “add to my favorite”, “save to my order list”, and “view my order list” which will pop up a dialog box and show the order list. 
 
 ===4. Food Recommendation===
 
