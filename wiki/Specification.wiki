@@ -79,7 +79,11 @@
 
 ===7. User Profile===
 
-
+   * This function will show all the user information and divide the interface into four parts:
+      # on the top-left corner of the screen, it is the profile picture of the user.
+      # On the top-right corner of the screen, some basic information will be shown, including user name, user ID, Balance in this account.
+      # On the body part, there is a list of record which is up to 10 days past orders being shown in a table.
+      # At the bottom, it is a button that links to a dialog box for users to change their user name and password.
 
 ===8. Tools===
 
