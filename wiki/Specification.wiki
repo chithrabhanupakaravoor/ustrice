@@ -1,6 +1,6 @@
 ==System Specification and Requirement==
 
- # [Log_in#Log in]
+ # [Specification#Log in]
  # Home Page
  # Ordering Menu
  # Food Recommendation
