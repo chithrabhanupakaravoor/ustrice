@@ -54,6 +54,10 @@
       # *"Nutrition" button* - To help customers maintain a healthy lifestyle, this option selects the foods which could balance their diet. For instance, if the user eat too much fat in this week, such as fried food, the system will recommend the food with less fat or may be contains more vegetables.
       # *"Shake" button* - By shaking the phone, the best answer would be calculated by referring to the 3 criteria above plus a hidden formula.
 
+   * Note: if one specific food was ordered by the user too often in a short period of time, it would not be counted. We prefer the user can have a more variety of food choice.
+
+   * *Once the choice is confirmed, it will proceed to the ordering and payment.*
+
 ===5. Preferences===
 
 
