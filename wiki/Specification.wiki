@@ -10,3 +10,6 @@
  # [Specification#Tools Tools]
 
 ===1. Log in===
+
+ * A database is built to store all the users' data
+ * Users need to log in to the system by using users' account and password
