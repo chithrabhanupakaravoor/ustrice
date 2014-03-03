@@ -48,6 +48,10 @@
 
 ===4. Food Recommendation===
 
+   * If users are frustrated with making decision of what to eat, this would be a great feature to assist him.
+   * With this advisor, the choices could be minimize into 3 only, using "Ranking", "Diet" or "Nutrition" option.
+   * If 3 choices are still too much, "Shake" function could even make the selection much faster, as users could get the only one recommendation which is also the best one by simply shaking the phone.
+   * "Food Recommendation" not only shortens the decision time but also choose the best food wisely for the customers.
 
 ===5. Preferences===
 
