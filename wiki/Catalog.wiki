@@ -1,21 +1,5 @@
 [Introduction Introduction and Problem Statement]
 
-[Catalog]
-
-1. Log in
-
-2. Home Page
-
-3. Ordering Menu
-
-4. Food Recommendation
-
-5. Preferences
-
-6. Ranking
-
-7. User Profile
-
-8. Tools
+System Specification and Requirement
 
 minutes
