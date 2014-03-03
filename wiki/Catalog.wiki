@@ -3,7 +3,7 @@
 [Specification System Specification and Requirement]
 
 minutes
-<wiki:toc max_depth="1" />
-minute template
-1st minute
-2nd minute
+
+ * minute template
+ * 1st minute
+ * 2nd minute
