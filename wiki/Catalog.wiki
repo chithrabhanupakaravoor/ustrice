@@ -1,6 +1,6 @@
 [Introduction Introduction and Problem Statement]
 
-Catalog
+[Catalog]
 
 1. Log in
 
