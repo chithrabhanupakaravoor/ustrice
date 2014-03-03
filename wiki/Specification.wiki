@@ -80,4 +80,7 @@
 ===7. User Profile===
 
 
+
 ===8. Tools===
+
+   * Tools used in this project: Android SDK, Eclipse Java, SQL
