@@ -1,6 +1,6 @@
 ==System Specification and Requirement==
 
- # Log in
+ # [Log in]
  # Home Page
  # Ordering Menu
  # Food Recommendation
@@ -8,3 +8,5 @@
  # Ranking
  # User Profile
  # Tools
+
+1. Log in
