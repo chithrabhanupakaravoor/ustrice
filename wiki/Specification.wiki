@@ -16,6 +16,14 @@
 
 ===2. Home Page===
 
+ * In the home page, i.e. the page after log in, it will be advertisements from different canteens, with photo of dishes and price, scrolling left and right will give advertisements from other canteens. It will automatically scroll from left to right every 4 seconds.
+ * At the bottom, there will be buttons for different functions and pages, they will stay at the bottom for each pages.
+    # Home – returning to home page
+    # Menu – ordering food and viewing menu
+    # Recommendation – recommending food choices for users
+    # Preferences – viewing and editing user’s preference
+    # Ranking – showing the food ranking
+    # User Profile – viewing and editing user’ profile
 
 ===3. Ordering Menu===
 
