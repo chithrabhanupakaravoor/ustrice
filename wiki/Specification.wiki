@@ -11,32 +11,34 @@
 
 ===1. Log in===
 
- * A database is built to store all the users' data
- * Users need to log in to the system by using users' account and password
+   * A database is built to store all the users' data
+   * Users need to log in to the system by using users' account and password
 
 ===2. Home Page===
 
- * In the home page, i.e. the page after log in, it will be advertisements from different canteens, with photo of dishes and price, scrolling left and right will give advertisements from other canteens. It will automatically scroll from left to right every 4 seconds.
- * At the bottom, there will be buttons for different functions and pages, they will stay at the bottom for each pages.
-    # Home – returning to home page
-    # Menu – ordering food and viewing menu
-    # Recommendation – recommending food choices for users
-    # Preferences – viewing and editing user’s preference
-    # Ranking – showing the food ranking
-    # User Profile – viewing and editing user’ profile
+   * In the home page, i.e. the page after log in, it will be advertisements from different canteens, with photo of dishes and price, scrolling left and right will give advertisements from other canteens. It will automatically scroll from left to right every 4 seconds.
+   * At the bottom, there will be buttons for different functions and pages, they will stay at the bottom for each pages.
+      # Home – returning to home page
+      # Menu – ordering food and viewing menu
+      # Recommendation – recommending food choices for users
+      # Preferences – viewing and editing user’s preference
+      # Ranking – showing the food ranking
+      # User Profile – viewing and editing user’ profile
 
 ===3. Ordering Menu===
 
- * Menu Page: 
-    # On the top of the screen, there is a bar for typing in key words to search foods.
-    # Type of food could be selected under it in order to filter them, option divided by “canteen”, “cuisine”, “dish”, and “price”.
-    # The choices will be displayed in 4 bars, and sliding them left and right to choose the type of food.
-    # Pressing the “filter” button will then filter the choices and go to the next page which is a list of food choices.
+   * Menu Page: 
+      # On the top of the screen, there is a bar for typing in key words to search foods.
+      # Type of food could be selected under it in order to filter them, option divided by “canteen”, “cuisine”, “dish”, and “price”.
+      # The choices will be displayed in 4 bars, and sliding them left and right to choose the type of food.
+      # Pressing the “filter” button will then filter the choices and go to the next page which is a list of food choices.
 
- * List Page:
-    # A list of food will be displayed with photos, name, rating and prices, within a rectangular box.
-    # On the left of the box, there is a star button which users can click on it to set as favorite, or click on it once again to remove from favorite.
-    # While in this page, there is a floating dialog box at the bottom which will show the order users have made temperately but not paid yet.
+   * List Page:
+      # A list of food will be displayed with photos, name, rating and prices, within a rectangular box.
+      # On the left of the box, there is a star button which users can click on it to set as favorite, or click on it once again to remove from favorite.
+      # While in this page, there is a floating dialog box at the bottom which will show the order users have made temperately but not paid yet.
+
+   * Food Page:
 
 ===4. Food Recommendation===
 
