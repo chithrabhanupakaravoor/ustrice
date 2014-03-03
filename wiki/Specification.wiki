@@ -7,7 +7,7 @@
  # [Specification#Preferences Preferences]
  # [Specification#Ranking Ranking]
  # [Specification#User_Profile User Profile]
- # [Specification#Tools Tools]
+ # [Specification#8._Tools Tools]
 
 ===1. Log in===
 
