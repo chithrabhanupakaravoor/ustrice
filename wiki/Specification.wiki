@@ -1,12 +1,12 @@
 ==System Specification and Requirement==
 
  # [Specification#Log_in Log in]
- # Home Page
- # Ordering Menu
- # Food Recommendation
- # Preferences
- # Ranking
- # User Profile
- # Tools
+ # [Specification#Home_Page Home Page]
+ # [Specification#Ordering_Menu Ordering Menu]
+ # [Specification#Food_Recommendation Food Recommendation]
+ # [Specification#Preferences Preferences]
+ # [Specification#Ranking Ranking]
+ # [Specification#User_Profile User Profile]
+ # [Specification#Tools Tools]
 
 ===1. Log in===
