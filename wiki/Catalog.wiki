@@ -2,7 +2,7 @@
 
 [Specification System Specification and Requirement]
 
-minutes
+Minutes
  * [Minutes_Template minute template]
  * 1st minute
  * 2nd minute
