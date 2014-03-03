@@ -60,6 +60,8 @@
 
 ===5. Preferences===
 
+   * This function can save a list of 10 items.
+   * The list will be shown as the List Page in Order Menu
 
 ===6. Ranking===
 
