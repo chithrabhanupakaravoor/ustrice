@@ -15,4 +15,19 @@
 
 ==Items==
 
-# 
+# *Confirmation of Minutes of the Last Meeting*
+   The minutes of the last meeting were approved without amendment.
+
+# *Progress Report*
+   || Member || Task Accomplished ||
+   || Kelvin || ||
+   || Seb || ||
+   || Lucas || ||
+
+# *Discussion of Impediments and Resolution*
+
+# *Goals For Coming Week*
+
+# *Internal Affairs*
+
+# *Meeting Adjournment and Next Meeting*
