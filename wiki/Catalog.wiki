@@ -1,7 +1,5 @@
    [Introduction Introduction and Problem Statement]
-
    [Specification System Specification and Requirement]
-
  * Minutes
    * [Minutes_Template minute template]
    * 1st minute
