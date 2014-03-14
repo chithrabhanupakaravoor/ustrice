@@ -1,5 +1,7 @@
 =COMP3111 Group Meeting=
 
+----
+
 ==Minutes Template==
 
 || *Date* || ||
