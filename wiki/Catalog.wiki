@@ -1,5 +1,5 @@
- [Introduction Introduction and Problem Statement]
- [Specification System Specification and Requirement]
+[Introduction Introduction and Problem Statement]
+[Specification System Specification and Requirement]
  * Minutes
    * [Minutes Template]
    * [1st_Regular_Meeting]
