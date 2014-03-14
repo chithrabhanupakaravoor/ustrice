@@ -2,7 +2,7 @@
  [Specification System Specification and Requirement]
  * Minutes
    * [Minutes Template]
-   * [1st Regular Meeting]
+   * [1st_Regular_Meeting]
    * [Extra Meeting For Proposal Presentation]
    * [2nd Regular Meeting]
    * [3rd Regular Meeting]
