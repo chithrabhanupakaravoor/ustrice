@@ -1,8 +1,9 @@
  [Introduction Introduction and Problem Statement]
  [Specification System Specification and Requirement]
  * Minutes
-   * [Minutes_Template minute template]
-   * 1st minute
-   * Extra Meeting For Proposal Presentation
-   * 2nd minute
-   * 3rd minute
+   * [Minutes Template]
+   * [1st Regular Meeting]
+   * [Extra Meeting For Proposal Presentation]
+   * [2nd Regular Meeting]
+   * [3rd Regular Meeting]
+   * [4th Regular Meeting]
