@@ -15,12 +15,12 @@
 
 ==Items==
 
-*1. Confirmation of Minutes of the Last Meeting*
+===1. Confirmation of Minutes of the Last Meeting===
    The minutes of the last meeting were approved without amendment.
 
 *2. Progress Report*
 
-|| Member || Task Accomplished ||
+|| *Member* || *Task Accomplished* ||
 || Kelvin || ||
 || Seb || ||
 || Lucas || ||
