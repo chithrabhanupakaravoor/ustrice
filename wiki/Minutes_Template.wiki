@@ -6,7 +6,7 @@
 
 || *Date* || ||
 || *Time* || 2 pm to 4 pm ||
-|| *Venue* || LG1355 HKUST Library               ||
+|| *Venue* || LG1355 HKUST Library ||
 || *Attendants* || Kelvin, Seb, Lucas ||
 || *Absent or leave* || ||
 || *Recorder* || Kelvin ||
