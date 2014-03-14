@@ -1,6 +1,6 @@
- * [Introduction Introduction and Problem Statement]
+   [Introduction Introduction and Problem Statement]
 
- * [Specification System Specification and Requirement]
+   [Specification System Specification and Requirement]
 
  * Minutes
    * [Minutes_Template minute template]
