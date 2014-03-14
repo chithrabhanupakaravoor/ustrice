@@ -9,6 +9,8 @@
  # [Specification#7._User_Profile User Profile]
  # [Specification#8._Tools Tools]
 
+----
+
 ===1. Log in===
 
    * A database is built to store all the users' data
