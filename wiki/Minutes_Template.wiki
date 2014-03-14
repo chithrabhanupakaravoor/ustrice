@@ -19,10 +19,11 @@
    The minutes of the last meeting were approved without amendment.
 
 *2. Progress Report*
-   || Member || Task Accomplished ||
-   || Kelvin || ||
-   || Seb || ||
-   || Lucas || ||
+
+|| Member || Task Accomplished ||
+|| Kelvin || ||
+|| Seb || ||
+|| Lucas || ||
 
 *3. Discussion of Impediments and Resolution*
 
