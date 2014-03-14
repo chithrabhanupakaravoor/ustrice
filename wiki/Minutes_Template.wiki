@@ -1,6 +1,6 @@
-==Group Meeting==
+=COMP3111 Group Meeting=
 
-===Minutes Template===
+==Minutes Template==
 
 || *Date* || ||
 || *Time* || 2 pm to 4 pm ||
