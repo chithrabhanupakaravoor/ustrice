@@ -2,9 +2,9 @@
 
 [Specification System Specification and Requirement]
 
-Minutes
- * [Minutes_Template minute template]
- * 1st minute
+ * Minutes
+   * [Minutes_Template minute template]
+   * 1st minute
    * Extra Meeting For Proposal Presentation
- * 2nd minute
- * 3rd minute
+   * 2nd minute
+   * 3rd minute
