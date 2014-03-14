@@ -1,4 +1,6 @@
-==Minutes==
+==Group Meeting==
+
+===Minutes Template===
 
 || *Date* || ||
 || *Time* || 2 pm to 4 pm ||
@@ -6,4 +8,3 @@
 || *Attendants* || Kelvin, Seb, Lucas ||
 || *Absent or leave* || ||
 || *Recorder* || Kelvin ||
-
