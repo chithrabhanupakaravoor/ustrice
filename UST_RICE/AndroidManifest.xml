@@ -55,8 +55,8 @@
                 android:value="com.example.ust_rice.MainActivity" />
         </activity>
         <activity
-            android:name="com.example.ust_rice.User"
-            android:label="@string/title_activity_user"
+            android:name="com.example.ust_rice.Account"
+            android:label="@string/title_activity_account"
             android:parentActivityName="com.example.ust_rice.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

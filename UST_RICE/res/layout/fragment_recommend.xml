@@ -23,45 +23,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#00000000"
             android:contentDescription="@string/food"
             android:onClick="goFood"
-            android:src="@drawable/abc_ab_bottom_solid_dark_holo" />
+            android:src="@drawable/menu_grey" />
 
         <ImageButton
             android:id="@+id/mbRecommend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#00000000"
             android:contentDescription="@string/recommendation"
-            android:onClick="goRecommend"
-            android:src="@drawable/abc_ab_bottom_solid_dark_holo" />
+            android:src="@drawable/recommend" />
 
         <ImageButton
             android:id="@+id/mbRanking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#00000000"
             android:contentDescription="@string/ranking"
             android:onClick="goRanking"
-            android:src="@drawable/abc_ab_bottom_solid_dark_holo" />
+            android:src="@drawable/ranking_grey" />
 
         <ImageButton
             android:id="@+id/mbFavourites"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#00000000"
             android:contentDescription="@string/favourites"
             android:onClick="goFavourites"
-            android:src="@drawable/abc_ab_bottom_solid_dark_holo" />
+            android:src="@drawable/favourites_grey" />
 
         <ImageButton
-            android:id="@+id/mbUser"
+            android:id="@+id/mbAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:contentDescription="@string/user"
-            android:onClick="goUser"
-            android:src="@drawable/abc_ab_bottom_solid_dark_holo" />
+            android:background="#00000000"
+            android:contentDescription="@string/account"
+            android:onClick="goAccount"
+            android:src="@drawable/account_grey" />
     </LinearLayout>
 
 </LinearLayout>

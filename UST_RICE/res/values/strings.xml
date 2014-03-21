@@ -9,12 +9,12 @@
     <string name="title_activity_recommend">Recommend</string>
     <string name="title_activity_food_menu">FoodMenu</string>
     <string name="title_activity_ranking">Ranking</string>
-    <string name="title_activity_user">User</string>
     <string name="ranking">Ranking</string>
-    <string name="user">User</string>
     <string name="food">Food</string>
     <string name="recommendation">Recommendation</string>
     <string name="favourites">Favourites</string>
     <string name="title_activity_favourites">Favourites</string>
+    <string name="title_activity_account">Account</string>
+    <string name="account">Account</string>
 
 </resources>

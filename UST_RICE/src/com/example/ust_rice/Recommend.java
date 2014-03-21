@@ -26,36 +26,42 @@ public class Recommend extends ActionBarActivity {
 		}
 	}
 
-	ImageButton mbFood, mbRecommend, mbRanking, mbFavourites, mbUser;
+	ImageButton mbFood, mbRanking, mbFavourites, mbAccount;
 
 	public void goFood(View view) {
 		Intent i = new Intent(this, FoodMenu.class);
 		mbFood = (ImageButton) findViewById(R.id.mbFood);
+		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
-	}
-
-	public void goRecommend(View view) {
-		Intent i = new Intent(this, Recommend.class);
-		mbRecommend = (ImageButton) findViewById(R.id.mbRecommend);
-		startActivity(i);
+		finish();
+		overridePendingTransition(0, 0);
 	}
 
 	public void goRanking(View view) {
 		Intent i = new Intent(this, Ranking.class);
 		mbRanking = (ImageButton) findViewById(R.id.mbRanking);
+		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
+		finish();
+		overridePendingTransition(0, 0);
 	}
 
 	public void goFavourites(View view) {
 		Intent i = new Intent(this, Favourites.class);
 		mbFavourites = (ImageButton) findViewById(R.id.mbFavourites);
+		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
+		finish();
+		overridePendingTransition(0, 0);
 	}
 
-	public void goUser(View view) {
-		Intent i = new Intent(this, User.class);
-		mbUser = (ImageButton) findViewById(R.id.mbUser);
+	public void goAccount(View view) {
+		Intent i = new Intent(this, Account.class);
+		mbAccount = (ImageButton) findViewById(R.id.mbAccount);
+		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
+		finish();
+		overridePendingTransition(0, 0);
 	}
 
 	@Override
