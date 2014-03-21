@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UST RICE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_recommend">Recommend</string>
+    <string name="title_activity_food_menu">FoodMenu</string>
+    <string name="title_activity_ranking">Ranking</string>
+    <string name="title_activity_user">User</string>
+    <string name="ranking">Ranking</string>
+    <string name="user">User</string>
+    <string name="food">Food</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="favourites">Favourites</string>
+    <string name="title_activity_favourites">Favourites</string>
+
+</resources>
