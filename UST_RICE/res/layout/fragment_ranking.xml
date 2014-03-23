@@ -2,18 +2,491 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FEFEFE"
     android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ranking"
-        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <RadioGroup
+            android:id="@+id/rgRanking1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/rbMostOrdered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/most_ordered"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rbMostRated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/most_rated"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rgRanking2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/rbByWeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/by_week"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rbByMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/by_month"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/bShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/show"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#929292"
+        android:paddingTop="1dp"
+        android:weightSum="10" >
+
+        <TableRow
+            android:id="@+id/trRank1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#929292"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/tvNo1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/top1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFood1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:text="Foooooooooooood"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPrice1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="$25.0"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trRank2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#929292"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/tvNo2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/top2"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFood2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:text="Foooooooooooood"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPrice2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="$25.0"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trRank3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#929292"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/tvNo3"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/top3"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFood3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:text="Foooooooooooood"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPrice3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="$25.0"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trRank4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#929292"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/tvNo4"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/top4"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFood4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:text="Foooooooooooood"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPrice4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="$25.0"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trRank5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#929292"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/tvNo5"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/top5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFood5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:text="Foooooooooooood"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPrice5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="$25.0"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trRank6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#929292"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/tvNo6"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/top6"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFood6"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:text="Foooooooooooood"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPrice6"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="$25.0"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trRank7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#929292"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/tvNo7"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/top7"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFood7"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:text="Foooooooooooood"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPrice7"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="$25.0"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trRank8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#929292"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/tvNo8"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/top8"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFood8"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:text="Foooooooooooood"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPrice8"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="$25.0"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trRank9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#929292"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/tvNo9"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/top9"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFood9"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:text="Foooooooooooood"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPrice9"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="$25.0"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trRank10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#929292"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/tvNo10"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/top10"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFood10"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:text="Foooooooooooood"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPrice10"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="$25.0"
+                android:textSize="20sp" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="bottom"
         android:orientation="horizontal"
         android:weightSum="5" >

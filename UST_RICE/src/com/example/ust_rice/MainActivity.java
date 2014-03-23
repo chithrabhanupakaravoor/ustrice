@@ -38,7 +38,6 @@ public class MainActivity extends ActionBarActivity {
 		mbRecommend = (ImageButton) findViewById(R.id.mbRecommend);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
-
 	}
 
 	public void goRanking(View view) {
@@ -46,7 +45,6 @@ public class MainActivity extends ActionBarActivity {
 		mbRanking = (ImageButton) findViewById(R.id.mbRanking);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
-
 	}
 
 	public void goFavourites(View view) {
@@ -54,7 +52,6 @@ public class MainActivity extends ActionBarActivity {
 		mbFavourites = (ImageButton) findViewById(R.id.mbFavourites);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
-
 	}
 
 	public void goAccount(View view) {

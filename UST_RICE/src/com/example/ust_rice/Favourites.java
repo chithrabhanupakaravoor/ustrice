@@ -33,8 +33,6 @@ public class Favourites extends ActionBarActivity {
 		mbFood = (ImageButton) findViewById(R.id.mbFood);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
-		finish();
-		overridePendingTransition(0, 0);
 	}
 
 	public void goRecommend(View view) {
@@ -42,8 +40,6 @@ public class Favourites extends ActionBarActivity {
 		mbRecommend = (ImageButton) findViewById(R.id.mbRecommend);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
-		finish();
-		overridePendingTransition(0, 0);
 	}
 
 	public void goRanking(View view) {
@@ -51,8 +47,6 @@ public class Favourites extends ActionBarActivity {
 		mbRanking = (ImageButton) findViewById(R.id.mbRanking);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
-		finish();
-		overridePendingTransition(0, 0);
 	}
 
 	public void goAccount(View view) {
@@ -60,6 +54,12 @@ public class Favourites extends ActionBarActivity {
 		mbAccount = (ImageButton) findViewById(R.id.mbAccount);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
+	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
 		finish();
 		overridePendingTransition(0, 0);
 	}
