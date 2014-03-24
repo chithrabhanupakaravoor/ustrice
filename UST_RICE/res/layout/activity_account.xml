@@ -1,8 +1,71 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ust_rice.Account"
-    tools:ignore="MergeRootFrame" />
+    android:orientation="vertical" >
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="5" >
+
+        <ImageButton
+            android:id="@+id/mbFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:contentDescription="@string/food"
+            android:onClick="goFood"
+            android:src="@drawable/menu_grey" />
+
+        <ImageButton
+            android:id="@+id/mbRecommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:contentDescription="@string/recommendation"
+            android:onClick="goRecommend"
+            android:src="@drawable/recommend_grey" />
+
+        <ImageButton
+            android:id="@+id/mbRanking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:contentDescription="@string/ranking"
+            android:onClick="goRanking"
+            android:src="@drawable/ranking_grey" />
+
+        <ImageButton
+            android:id="@+id/mbFavourites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:contentDescription="@string/favourites"
+            android:onClick="goFavourites"
+            android:src="@drawable/favourites_grey" />
+
+        <ImageButton
+            android:id="@+id/mbAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:contentDescription="@string/account"
+            android:src="@drawable/account" />
+    </LinearLayout>
+
+</LinearLayout>
