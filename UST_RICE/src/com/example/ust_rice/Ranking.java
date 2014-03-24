@@ -1,5 +1,13 @@
 package com.example.ust_rice;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
@@ -19,12 +27,20 @@ import android.widget.TextView;
 
 public class Ranking extends ActionBarActivity {
 
+	final String severIp = "http://223.19.68.90/ust_rice/";
+
 	RadioGroup rgRanking1;
 	RadioButton rbMostOrdered, rbMostRated;
 
 	TableLayout tlRanking;
 	TableRow trRanking;
 	TextView tvRank, tvFood, tvPrice, tvRating, tvVariable;
+
+	String ranking_switch;
+	String name[] = new String[10];
+	int numOfOrder[] = new int[10];
+	int price[] = new int[10];
+	int rating[] = new int[10];
 
 	JSONParser jsonParser = new JSONParser();
 
@@ -41,16 +57,17 @@ public class Ranking extends ActionBarActivity {
 		rbMostRated = (RadioButton) findViewById(R.id.rbMostRated);
 		tvVariable = (TextView) findViewById(R.id.tvRate);
 		tlRanking = (TableLayout) findViewById(R.id.tlRanking);
-		
+
 		rgRanking1
 				.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 					public void onCheckedChanged(RadioGroup group, int checkedId) {
 						if (checkedId == rbMostOrdered.getId()) {
+							ranking_switch = "rating";
 							createMostOrdered();
 							tvVariable.setText("Rating");
 							tvVariable.setTextColor(0xFFFF3B30);
-						} 
-						else if (checkedId == rbMostRated.getId()) {
+						} else if (checkedId == rbMostRated.getId()) {
+							ranking_switch = "numOfOrder";
 							createMostRated();
 							tvVariable.setText("Order");
 							tvVariable.setTextColor(0xFFFF3B30);
@@ -58,14 +75,36 @@ public class Ranking extends ActionBarActivity {
 					}
 				});
 
+	}
 
+	public void getData() {
+
+		try {
+
+			List<NameValuePair> params = new ArrayList<NameValuePair>();
+			params.add(new BasicNameValuePair("sortBy", ranking_switch));
+			JSONArray jArray = jsonParser.makeHttpRequest(severIp + "rank.php",
+					params);
+
+			for (int i = 0; i < jArray.length(); i++) {
+				JSONObject json = jArray.getJSONObject(i);
+
+				name[i] = json.getString("food_name");
+				numOfOrder[i] = json.getInt("numOfOrder");
+				price[i] = json.getInt("price");
+				rating[i] = json.getInt("rating");
+			}
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+		}
 	}
 
 	public void createMostOrdered() {
 		if (tlRanking.getChildCount() > 1) {
 			tlRanking.removeViews(1, 10);
 		}
-
+		getData();
 		for (int i = 0; i < 10; i++) {
 			// Create a TableRow dynamically
 			trRanking = new TableRow(this);
@@ -79,7 +118,7 @@ public class Ranking extends ActionBarActivity {
 					LayoutParams.MATCH_PARENT, 1));
 			tvRank.setBackgroundColor(0xFFFFFFFF);
 			tvRank.setGravity(0x11);
-			tvRank.setText("1.");
+			tvRank.setText(i + 1 + ".");
 			tvRank.setTextSize(15);
 			trRanking.addView(tvRank);
 
@@ -88,7 +127,7 @@ public class Ranking extends ActionBarActivity {
 					LayoutParams.MATCH_PARENT, 7));
 			tvFood.setBackgroundColor(0xFFFFFFFF);
 			tvFood.setGravity(0x03 | 0x11);
-			tvFood.setText(Integer.toString(tlRanking.getChildCount()));
+			tvFood.setText(name[i]);
 			tvFood.setTextSize(15);
 			trRanking.addView(tvFood);
 
@@ -97,7 +136,7 @@ public class Ranking extends ActionBarActivity {
 					LayoutParams.MATCH_PARENT, 1));
 			tvPrice.setBackgroundColor(0xFFFFFFFF);
 			tvPrice.setGravity(0x11);
-			tvPrice.setText("$25.0");
+			tvPrice.setText("$" + price[i]);
 			tvPrice.setTextSize(15);
 			trRanking.addView(tvPrice);
 
@@ -106,7 +145,7 @@ public class Ranking extends ActionBarActivity {
 					LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT, 1));
 			tvRating.setBackgroundColor(0xFFFFFFFF);
 			tvRating.setGravity(0x11);
-			tvRating.setText("10");
+			tvRating.setText(Integer.toString(rating[i]));
 			tvRating.setTextSize(15);
 			trRanking.addView(tvRating);
 
@@ -120,6 +159,7 @@ public class Ranking extends ActionBarActivity {
 		if (tlRanking.getChildCount() > 1) {
 			tlRanking.removeViews(1, 10);
 		}
+		getData();
 		for (int i = 0; i < 10; i++) {
 			// Create a TableRow dynamically
 			trRanking = new TableRow(this);
@@ -133,7 +173,7 @@ public class Ranking extends ActionBarActivity {
 					LayoutParams.MATCH_PARENT, 1));
 			tvRank.setBackgroundColor(0xFFFFFFFF);
 			tvRank.setGravity(0x11);
-			tvRank.setText("2.");
+			tvRank.setText(i + 1 + ".");
 			tvRank.setTextSize(15);
 			trRanking.addView(tvRank);
 
@@ -142,7 +182,7 @@ public class Ranking extends ActionBarActivity {
 					LayoutParams.MATCH_PARENT, 7));
 			tvFood.setBackgroundColor(0xFFFFFFFF);
 			tvFood.setGravity(0x03 | 0x11);
-			tvFood.setText("3");
+			tvFood.setText(name[i]);
 			tvFood.setTextSize(15);
 			trRanking.addView(tvFood);
 
@@ -151,7 +191,7 @@ public class Ranking extends ActionBarActivity {
 					LayoutParams.MATCH_PARENT, 1));
 			tvPrice.setBackgroundColor(0xFFFFFFFF);
 			tvPrice.setGravity(0x11);
-			tvPrice.setText("$99.0");
+			tvPrice.setText("$" + price[i]);
 			tvPrice.setTextSize(15);
 			trRanking.addView(tvPrice);
 
@@ -160,7 +200,7 @@ public class Ranking extends ActionBarActivity {
 					LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT, 1));
 			tvRating.setBackgroundColor(0xFFFFFFFF);
 			tvRating.setGravity(0x11);
-			tvRating.setText("85");
+			tvRating.setText(Integer.toString(numOfOrder[i]));
 			tvRating.setTextSize(15);
 			trRanking.addView(tvRating);
 
