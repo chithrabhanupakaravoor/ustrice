@@ -20,7 +20,7 @@
     <string name="canteen">Canteen</string>
     <string name="time">Time</string>
     <string name="dish">Dish</string>
-    
+
     <!-- Ranking -->
     <string name="most_ordered">Most Ordered</string>
     <string name="most_rated">Most rated</string>
@@ -29,5 +29,6 @@
     <string name="rank">Rank</string>
     <string name="price">Price</string>
     <string name="rating">Rating</string>
+    <string name="title_activity_rrank">RRank</string>
 
 </resources>

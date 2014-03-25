@@ -69,6 +69,10 @@
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
+        <activity
+            android:name="com.example.ust_rice.RRank"
+            android:label="@string/title_activity_rrank" >
+        </activity>
     </application>
 
 </manifest>

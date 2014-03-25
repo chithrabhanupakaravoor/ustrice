@@ -13,7 +13,37 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="182dp"
+        android:layout_weight="0.51"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="5" >
+
+        <Button
+            android:id="@+id/rranking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:onClick="goRank"
+            android:text="Ranking" />
+
+        <Button
+            android:id="@+id/rpreference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goPref"
+            android:text="Prefernce" />
+
+        <Button
+            android:id="@+id/rnutrition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goNur"
+            android:text="Nutrition" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
         android:gravity="bottom"
         android:orientation="horizontal"
         android:weightSum="5" >

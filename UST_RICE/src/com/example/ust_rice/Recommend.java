@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.os.Build;
 
@@ -21,9 +22,16 @@ public class Recommend extends ActionBarActivity {
 		setContentView(R.layout.activity_recommend);
 
 	}
-
+	Button bRanking, bPreferenceb,Nutrition ;
 	ImageButton mbFood, mbRanking, mbFavourites, mbAccount;
 
+	public void goRank(View view) {
+		Intent i = new Intent(this, RRank.class);
+		bRanking = (Button) findViewById(R.id.rranking);
+		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+		startActivity(i);
+	}
+	
 	public void goFood(View view) {
 		Intent i = new Intent(this, FoodMenu.class);
 		mbFood = (ImageButton) findViewById(R.id.mbFood);
