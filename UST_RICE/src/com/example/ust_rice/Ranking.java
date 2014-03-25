@@ -27,7 +27,6 @@ import android.widget.TextView;
 
 public class Ranking extends ActionBarActivity {
 
-	final String severIp = "http://223.19.68.90/ust_rice/";
 
 	RadioGroup rgRanking1;
 	RadioButton rbMostOrdered, rbMostRated;
@@ -83,7 +82,7 @@ public class Ranking extends ActionBarActivity {
 
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("sortBy", ranking_switch));
-			JSONArray jArray = jsonParser.makeHttpRequest(severIp + "rank.php",
+			JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.Ip + "rank.php",
 					params);
 
 			for (int i = 0; i < jArray.length(); i++) {
@@ -97,6 +96,7 @@ public class Ranking extends ActionBarActivity {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			finish();
 		}
 	}
 

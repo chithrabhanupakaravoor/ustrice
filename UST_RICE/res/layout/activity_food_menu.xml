@@ -11,9 +11,193 @@
         android:text="@string/food"
         android:textSize="30sp" />
 
+    <TextView
+        android:id="@+id/fmCanteen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/canteen" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cbCanteen1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canteen A" />
+
+        <CheckBox
+            android:id="@+id/cbCanteen2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canteen B" />
+
+        <CheckBox
+            android:id="@+id/cbCanteen3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canteen C" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fmTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/time" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cbAllDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All Day" />
+
+        <CheckBox
+            android:id="@+id/cbBreakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Breakfast" />
+
+        <CheckBox
+            android:id="@+id/cblunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lunch" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cbTea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tea" />
+
+        <CheckBox
+            android:id="@+id/cbDinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dinner" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fmDish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/dish" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cbDish1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+
+        <CheckBox
+            android:id="@+id/cbDish2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+
+        <CheckBox
+            android:id="@+id/cbDish3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fmPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/price" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cbPrice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0 - 20" />
+
+        <CheckBox
+            android:id="@+id/cbPrice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$21 - 30" />
+
+        <CheckBox
+            android:id="@+id/cbPrice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Above $30" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fmRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/rating" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cbRating1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Above 90" />
+
+        <CheckBox
+            android:id="@+id/cbRating2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Above 80" />
+
+        <CheckBox
+            android:id="@+id/cbRating3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Above 70" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#929292" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="bottom"
         android:orientation="horizontal"
         android:weightSum="5" >

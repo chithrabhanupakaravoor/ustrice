@@ -25,6 +25,8 @@ public class JSONParser {
     static JSONArray jArray = null;
     static String json = "";
  
+    public final String Ip = "http://10.0.2.2:80/ust_rice/";
+    
     // constructor
     public JSONParser() {
  

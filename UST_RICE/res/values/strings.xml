@@ -16,24 +16,18 @@
     <string name="recommendation">Recommendation</string>
     <string name="favourites">Favourites</string>
     <string name="account">Account</string>
+    <!-- Food Menu -->
+    <string name="canteen">Canteen</string>
+    <string name="time">Time</string>
+    <string name="dish">Dish</string>
+    
     <!-- Ranking -->
     <string name="most_ordered">Most Ordered</string>
     <string name="most_rated">Most rated</string>
     <string name="by_week">By Week</string>
     <string name="by_month">By Month</string>
-    <string name="show">Show</string>
     <string name="rank">Rank</string>
     <string name="price">Price</string>
     <string name="rating">Rating</string>
-    <string name="top1">1.</string>
-    <string name="top2">2.</string>
-    <string name="top3">3.</string>
-    <string name="top4">4.</string>
-    <string name="top5">5.</string>
-    <string name="top6">6.</string>
-    <string name="top7">7.</string>
-    <string name="top8">8.</string>
-    <string name="top9">9.</string>
-    <string name="top10">10.</string>
 
 </resources>
