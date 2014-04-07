@@ -14,36 +14,42 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="182dp"
-        android:layout_weight="0.51"
-        android:gravity="center"
+        android:layout_weight="1"
+        android:gravity="top|center_horizontal"
         android:orientation="vertical"
         android:weightSum="5" >
 
-        <Button
+        <ImageButton
             android:id="@+id/re_ranking"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-			android:onClick="goRank"
-            android:text="Ranking" />
+            android:layout_weight="1.27"
+            android:background="#00000000"
+            android:onClick="goRank"
+            android:src="@drawable/rank" />
 
-        <Button
+        <ImageButton
             android:id="@+id/re_preference"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1.80"
+            android:background="#00000000"
             android:onClick="goPref"
-            android:text="Prefernce" />
+            android:src="@drawable/preference" />
 
-        <Button
+        <ImageButton
             android:id="@+id/re_nutrition"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#00000000"
             android:onClick="goNut"
-            android:text="Nutrition" />
+            android:src="@drawable/nutrition" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="81dp"
+        android:layout_height="wrap_content"
         android:gravity="bottom"
         android:orientation="horizontal"
         android:weightSum="5" >
