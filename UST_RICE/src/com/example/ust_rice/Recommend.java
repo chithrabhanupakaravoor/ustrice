@@ -26,8 +26,20 @@ public class Recommend extends ActionBarActivity {
 	ImageButton mbFood, mbRanking, mbFavourites, mbAccount;
 
 	public void goRank(View view) {
-		Intent i = new Intent(this, RRank.class);
-		bRanking = (Button) findViewById(R.id.rranking);
+		Intent i = new Intent(this, ReRanking.class);
+		bRanking = (Button) findViewById(R.id.re_ranking);
+		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+		startActivity(i);
+	}
+	public void goPref(View view) {
+		Intent i = new Intent(this, RePreference.class);
+		bRanking = (Button) findViewById(R.id.re_preference);
+		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+		startActivity(i);
+	}
+	public void goNut(View view) {
+		Intent i = new Intent(this, ReNutrition.class);
+		bRanking = (Button) findViewById(R.id.re_nutrition);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
 	}

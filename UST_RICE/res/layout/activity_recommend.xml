@@ -20,24 +20,24 @@
         android:weightSum="5" >
 
         <Button
-            android:id="@+id/rranking"
+            android:id="@+id/re_ranking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 			android:onClick="goRank"
             android:text="Ranking" />
 
         <Button
-            android:id="@+id/rpreference"
+            android:id="@+id/re_preference"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="goPref"
             android:text="Prefernce" />
 
         <Button
-            android:id="@+id/rnutrition"
+            android:id="@+id/re_nutrition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="goNur"
+            android:onClick="goNut"
             android:text="Nutrition" />
     </LinearLayout>
 

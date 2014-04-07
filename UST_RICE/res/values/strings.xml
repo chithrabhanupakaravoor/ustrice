@@ -30,5 +30,9 @@
     <string name="price">Price</string>
     <string name="rating">Rating</string>
     <string name="title_activity_rrank">RRank</string>
+    <string name="title_activity_re_rank">ReRank</string>
+    <string name="title_activity_re_ranking">ReRanking</string>
+    <string name="title_activity_re_preference">RePreference</string>
+    <string name="title_activity_re_nutrition">ReNutrition</string>
 
 </resources>

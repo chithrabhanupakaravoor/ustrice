@@ -73,6 +73,22 @@
             android:name="com.example.ust_rice.RRank"
             android:label="@string/title_activity_rrank" >
         </activity>
+        <activity
+            android:name="com.example.ust_rice.ReRank"
+            android:label="@string/title_activity_re_rank" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.ReRanking"
+            android:label="@string/title_activity_re_ranking" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.RePreference"
+            android:label="@string/title_activity_re_preference" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.ReNutrition"
+            android:label="@string/title_activity_re_nutrition" >
+        </activity>
     </application>
 
 </manifest>
