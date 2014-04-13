@@ -4,191 +4,341 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/food"
-        android:textSize="30sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#929292" />
 
     <TextView
         android:id="@+id/fmCanteen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="center"
-        android:text="@string/canteen" />
+        android:text="@string/canteen"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-    <LinearLayout
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#929292" />
+
+    <RadioGroup
+        android:id="@+id/rgCanteen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
+        android:layout_weight="1"
         android:orientation="horizontal" >
 
-        <CheckBox
-            android:id="@+id/cbCanteen1"
+        <RadioButton
+            android:id="@+id/rbCanteenAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="All" />
+
+        <RadioButton
+            android:id="@+id/rbCanteenA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Canteen A" />
 
-        <CheckBox
-            android:id="@+id/cbCanteen2"
+        <RadioButton
+            android:id="@+id/rbCanteenB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Canteen B" />
+    </RadioGroup>
 
-        <CheckBox
-            android:id="@+id/cbCanteen3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Canteen C" />
-    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#929292" />
 
     <TextView
         android:id="@+id/fmTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="center"
-        android:text="@string/time" />
+        android:text="@string/time"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-    <LinearLayout
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#929292" />
+
+    <RadioGroup
+        android:id="@+id/rgTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
-        android:orientation="horizontal" >
+        android:layout_weight="1" >
 
-        <CheckBox
-            android:id="@+id/cbAllDay"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="All Day" />
+            android:layout_weight="1"
+            android:orientation="horizontal" >
 
-        <CheckBox
-            android:id="@+id/cbBreakfast"
-            android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/rbAllday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:onClick="mainTime"
+                android:text="All day" />
+
+            <RadioButton
+                android:id="@+id/rbBreakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="mainTime"
+                android:text="Breakfast" />
+
+            <RadioButton
+                android:id="@+id/rbLunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="mainTime"
+                android:text="Lunch" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Breakfast" />
+            android:layout_weight="1"
+            android:orientation="horizontal" >
 
-        <CheckBox
-            android:id="@+id/cblunch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lunch" />
-    </LinearLayout>
+            <RadioButton
+                android:id="@+id/rbTea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="mainTime"
+                android:text="Tea" />
 
-    <LinearLayout
+            <RadioButton
+                android:id="@+id/rbDinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="mainTime"
+                android:text="Dinner" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:orientation="horizontal" >
-
-        <CheckBox
-            android:id="@+id/cbTea"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tea" />
-
-        <CheckBox
-            android:id="@+id/cbDinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dinner" />
-    </LinearLayout>
+        android:layout_height="1px"
+        android:background="#929292" />
 
     <TextView
-        android:id="@+id/fmDish"
+        android:id="@+id/fmCuisine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="center"
-        android:text="@string/dish" />
+        android:text="@string/cuisine"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-    <LinearLayout
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#929292" />
+
+    <RadioGroup
+        android:id="@+id/rgCuisine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
-        android:orientation="horizontal" >
+        android:layout_weight="1" >
 
-        <CheckBox
-            android:id="@+id/cbDish1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:layout_weight="1"
+            android:orientation="horizontal" >
 
-        <CheckBox
-            android:id="@+id/cbDish2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            <RadioButton
+                android:id="@+id/rbCuisineAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:onClick="mainCuisine"
+                android:text="All" />
 
-        <CheckBox
-            android:id="@+id/cbDish3"
-            android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/rbChinese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="mainCuisine"
+                android:text="Chinese" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
-    </LinearLayout>
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbWestern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="mainCuisine"
+                android:text="Western" />
+
+            <RadioButton
+                android:id="@+id/rbOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="mainCuisine"
+                android:text="Others" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#929292" />
 
     <TextView
         android:id="@+id/fmPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="center"
-        android:text="@string/price" />
+        android:text="@string/price"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#929292" />
+
+    <RadioGroup
+        android:id="@+id/rgPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbPriceAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="All" />
+
+        <RadioButton
+            android:id="@+id/rbPrice25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Below $25" />
+
+        <RadioButton
+            android:id="@+id/rbPrice30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Below $30" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="#FF3B30" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
-        android:orientation="horizontal" >
-
-        <CheckBox
-            android:id="@+id/cbPrice1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$0 - 20" />
-
-        <CheckBox
-            android:id="@+id/cbPrice2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$21 - 30" />
-
-        <CheckBox
-            android:id="@+id/cbPrice3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Above $30" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/fmRating"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="center"
-        android:text="@string/rating" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
         android:orientation="horizontal" >
 
-        <CheckBox
-            android:id="@+id/cbRating1"
+        <TextView
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Above 90" />
+            android:text="Sort By:"
+            android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/cbRating2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Above 80" />
+        <RadioGroup
+            android:id="@+id/rgSortby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-        <CheckBox
-            android:id="@+id/cbRating3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Above 70" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rbSortby1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:onClick="mainSort"
+                    android:text="Canteen" />
+
+                <RadioButton
+                    android:id="@+id/rbSortby2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="mainSort"
+                    android:text="Time" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rbSortby3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="mainSort"
+                    android:text="Cuisine" />
+
+                <RadioButton
+                    android:id="@+id/rbSortby4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="mainSort"
+                    android:text="Price" />
+            </LinearLayout>
+        </RadioGroup>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/bSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Search" />
 
     <View
         android:layout_width="match_parent"

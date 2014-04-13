@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -18,127 +17,106 @@ import org.apache.http.protocol.HTTP;
 import org.json.JSONArray;
 import org.json.JSONException;
 import android.util.Log;
- 
+
 public class JSONParser {
- 
-    static InputStream is = null;
-    static JSONArray jArray = null;
-    static String json = "";
- 
-    public final String Ip = "http://10.0.2.2:80/ust_rice/";
-    
-    // constructor
-    public JSONParser() {
- 
-    }
-    
-    
-    public JSONArray getJSONFromUrl(final String url) {
 
-        // Making HTTP request
-        try {
-            // Construct the client and the HTTP request.
-            DefaultHttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost(url);
+	static InputStream is = null;
+	static JSONArray jArray = null;
+	static String json = "";
+	
+	// Android local host IP: 10.0.2.2:80
+	// External IP: 223.19.67.229
+	// 				223.19.68.90
+	public final String URL = "http://10.0.2.2:80/ust_rice/";
 
-            // Execute the POST request and store the response locally.
-            HttpResponse httpResponse = httpClient.execute(httpPost);
-            // Extract data from the response.
-            HttpEntity httpEntity = httpResponse.getEntity();
-            // Open an inputStream with the data content.
-            is = httpEntity.getContent();
+	public JSONParser() {
 
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+	}
 
-        try {
-            // Create a BufferedReader to parse through the inputStream.
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    is, "iso-8859-1"), 8);
-            // Declare a string builder to help with the parsing.
-            StringBuilder sb = new StringBuilder();
-            // Declare a string to store the JSON object data in string form.
-            String line = null;
-            
-            // Build the string until null.
-            while ((line = reader.readLine()) != null) {
-                sb.append(line + "\n");
-            }
-            
-            // Close the input stream.
-            is.close();
-            // Convert the string builder data to an actual string.
-            json = sb.toString();
-        } catch (Exception e) {
-            Log.e("Buffer Error", "Error converting result " + e.toString());
-        }
+	public JSONArray getJSONFromUrl(final String url) {
 
-        // Try to parse the string to a JSON object
-        try {
-            jArray = new JSONArray(json);
-        } catch (JSONException e) {
-            Log.e("JSON Parser", "Error parsing data " + e.toString());
-        }
+		try {
+			DefaultHttpClient httpClient = new DefaultHttpClient();
+			HttpPost httpPost = new HttpPost(url);
 
-        // Return the JSON Object.
-        return jArray;
+			HttpResponse httpResponse = httpClient.execute(httpPost);
+			HttpEntity httpEntity = httpResponse.getEntity();
+			is = httpEntity.getContent();
+			
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (ClientProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-    }
-    
- 
-    // function get json from url
-    // by making HTTP POST or GET mehtod
-    public JSONArray makeHttpRequest(String url, List<NameValuePair> params) {
- 
-        // Making HTTP request
-        try {
-		// request method is POST
-                // defaultHttpClient
-                DefaultHttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost(url);
-                httpPost.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
- 
-                HttpResponse httpResponse = httpClient.execute(httpPost);
-                
-                HttpEntity httpEntity = httpResponse.getEntity();
-                is = httpEntity.getContent();          
- 
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
- 
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    is, "iso-8859-1"), 8);
-            StringBuilder sb = new StringBuilder();
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                sb.append(line + "\n");
-            }
-            is.close();
-            json = sb.toString();
-        } catch (Exception e) {
-            Log.e("Buffer Error", "Error converting result " + e.toString());
-        }
- 
-        // try parse the string to a JSON object
-        try {
-            jArray = new JSONArray(json);
-        } catch (JSONException e) {
-            Log.e("JSON Parser", "Error parsing data " + e.toString());
-        }
- 
-        // return JSON String
-        return jArray;
- 
-    }
+		try {
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					is, "iso-8859-1"), 8);
+			StringBuilder sb = new StringBuilder();
+			String line = null;
+			
+			while ((line = reader.readLine()) != null) {
+				sb.append(line + "\n");
+			}
+			
+			is.close();
+			json = sb.toString();
+			
+		} catch (Exception e) {
+			Log.e("Buffer Error", "Error converting result " + e.toString());
+		}
+
+		try {
+			jArray = new JSONArray(json);
+		} catch (JSONException e) {
+			Log.e("JSON Parser", "Error parsing data " + e.toString());
+		}
+		return jArray;
+	}
+
+	public JSONArray makeHttpRequest(String url, List<NameValuePair> params) {
+
+		try {
+			DefaultHttpClient httpClient = new DefaultHttpClient();
+			HttpPost httpPost = new HttpPost(url);
+			httpPost.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
+
+			HttpResponse httpResponse = httpClient.execute(httpPost);
+
+			HttpEntity httpEntity = httpResponse.getEntity();
+			is = httpEntity.getContent();
+
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (ClientProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		try {
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					is, "iso-8859-1"), 8);
+			StringBuilder sb = new StringBuilder();
+			String line = null;
+			
+			while ((line = reader.readLine()) != null) {
+				sb.append(line + "\n");
+			}
+			is.close();
+			json = sb.toString();
+			
+		} catch (Exception e) {
+			Log.e("Buffer Error", "Error converting result " + e.toString());
+		}
+
+		try {
+			jArray = new JSONArray(json);
+		} catch (JSONException e) {
+			Log.e("JSON Parser", "Error parsing data " + e.toString());
+		}
+		return jArray;
+	}
 }

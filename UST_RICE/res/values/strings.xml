@@ -10,6 +10,11 @@
     <string name="title_activity_ranking">Ranking</string>
     <string name="title_activity_favourites">Favourites</string>
     <string name="title_activity_account">Account</string>
+    <string name="title_activity_rrank">RRank</string>
+    <string name="title_activity_re_rank">ReRank</string>
+    <string name="title_activity_re_ranking">ReRanking</string>
+    <string name="title_activity_re_preference">RePreference</string>
+    <string name="title_activity_re_nutrition">ReNutrition</string>
     <string name="home">Home</string>
     <string name="ranking">Ranking</string>
     <string name="food">Food</string>
@@ -19,7 +24,7 @@
     <!-- Food Menu -->
     <string name="canteen">Canteen</string>
     <string name="time">Time</string>
-    <string name="dish">Dish</string>
+    <string name="cuisine">Cuisine</string>
 
     <!-- Ranking -->
     <string name="most_ordered">Most Ordered</string>
@@ -29,10 +34,7 @@
     <string name="rank">Rank</string>
     <string name="price">Price</string>
     <string name="rating">Rating</string>
-    <string name="title_activity_rrank">RRank</string>
-    <string name="title_activity_re_rank">ReRank</string>
-    <string name="title_activity_re_ranking">ReRanking</string>
-    <string name="title_activity_re_preference">RePreference</string>
-    <string name="title_activity_re_nutrition">ReNutrition</string>
+    <string name="title_activity_food_menu_search">FoodMenuSearch</string>
+    <string name="title_activity_food_item">FoodItem</string>
 
 </resources>

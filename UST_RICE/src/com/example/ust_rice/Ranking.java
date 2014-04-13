@@ -18,7 +18,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -29,7 +28,7 @@ public class Ranking extends ActionBarActivity {
 
 
 	RadioGroup rgRanking1;
-	RadioButton rbMostOrdered, rbMostRated;
+	//RadioButton rbMostOrdered, rbMostRated;
 
 	TableLayout tlRanking;
 	TableRow trRanking;
@@ -52,20 +51,20 @@ public class Ranking extends ActionBarActivity {
 		StrictMode.enableDefaults();
 
 		rgRanking1 = (RadioGroup) findViewById(R.id.rgRanking1);
-		rbMostOrdered = (RadioButton) findViewById(R.id.rbMostOrdered);
-		rbMostRated = (RadioButton) findViewById(R.id.rbMostRated);
+		//rbMostOrdered = (RadioButton) findViewById(R.id.rbMostOrdered);
+		//rbMostRated = (RadioButton) findViewById(R.id.rbMostRated);
 		tvVariable = (TextView) findViewById(R.id.tvRate);
 		tlRanking = (TableLayout) findViewById(R.id.tlRanking);
 
 		rgRanking1
 				.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 					public void onCheckedChanged(RadioGroup group, int checkedId) {
-						if (checkedId == rbMostOrdered.getId()) {
+						if (checkedId == R.id.rbMostOrdered) {
 							ranking_switch = "rating";
 							createMostOrdered();
 							tvVariable.setText("Rating");
 							tvVariable.setTextColor(0xFFFF3B30);
-						} else if (checkedId == rbMostRated.getId()) {
+						} else if (checkedId == R.id.rbMostRated) {
 							ranking_switch = "numOfOrder";
 							createMostRated();
 							tvVariable.setText("Order");
@@ -82,7 +81,7 @@ public class Ranking extends ActionBarActivity {
 
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("sortBy", ranking_switch));
-			JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.Ip + "rank.php",
+			JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL + "rank.php",
 					params);
 
 			for (int i = 0; i < jArray.length(); i++) {
@@ -96,7 +95,6 @@ public class Ranking extends ActionBarActivity {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			finish();
 		}
 	}
 

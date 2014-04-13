@@ -8,44 +8,149 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/recommendation"
+        android:text="Ranking"
         android:textSize="30sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#929292" >
+    </View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#929292" >
+    </View>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="182dp"
         android:layout_weight="1"
-        android:gravity="top|center_horizontal"
+        android:gravity="center"
         android:orientation="vertical"
-        android:weightSum="5" >
+        android:weightSum="3" >
 
-        <ImageButton
-            android:id="@+id/re_ranking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.27"
-            android:background="#00000000"
-            android:onClick="goRank"
-            android:src="@drawable/rank" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="3" >
 
-        <ImageButton
-            android:id="@+id/re_preference"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.80"
-            android:background="#00000000"
-            android:onClick="goPref"
-            android:src="@drawable/preference" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:gravity="center" />
 
-        <ImageButton
-            android:id="@+id/re_nutrition"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00000000"
-            android:onClick="goNut"
-            android:src="@drawable/nutrition" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.56"
+                android:gravity="left|center"
+                android:text="BBQ Pork Rice"
+                android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.90"
+                android:gravity="center"
+                android:text="$23"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#929292" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.56"
+                android:gravity="left|center"
+                android:text="Hot Dog Tea Set"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.90"
+                android:gravity="center"
+                android:text="$20"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#929292" >
+        </View>
+
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.56"
+                android:gravity="left|center"
+                android:text="Home Style Cuisine"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.90"
+                android:gravity="center"
+                android:text="$25"
+                android:textSize="20sp" />
+
+        </LinearLayout>
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#929292" >
+    </View>
 
     <LinearLayout
         android:layout_width="match_parent"
