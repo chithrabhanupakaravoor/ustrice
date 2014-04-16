@@ -1,0 +1,210 @@
+# view res/layout/abc_action_menu_item_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ActionMenuItemView { <init>(...); }
+
+# view res/layout/abc_action_menu_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ActionMenuView { <init>(...); }
+
+# view res/layout/abc_expanded_menu_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ExpandedMenuView { <init>(...); }
+
+# view res/layout/abc_list_menu_item_layout.xml #generated:17
+# view res/layout/abc_popup_menu_item_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ListMenuItemView { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_include.xml #generated:19
+# view res/layout/abc_action_bar_decor_include.xml #generated:47
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:29
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:52
+-keep class android.support.v7.internal.widget.ActionBarContainer { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_include.xml #generated:31
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:40
+# view res/layout/abc_action_mode_bar.xml #generated:19
+-keep class android.support.v7.internal.widget.ActionBarContextView { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:17
+-keep class android.support.v7.internal.widget.ActionBarOverlayLayout { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_include.xml #generated:25
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:35
+-keep class android.support.v7.internal.widget.ActionBarView { <init>(...); }
+
+# view res/layout/abc_action_bar_home.xml #generated:17
+-keep class android.support.v7.internal.widget.ActionBarView$HomeView { <init>(...); }
+
+# view res/layout/abc_action_bar_tabbar.xml #generated:17
+# view res/layout/abc_activity_chooser_view.xml #generated:19
+-keep class android.support.v7.internal.widget.LinearLayoutICS { <init>(...); }
+
+# view v11\res/layout-v11/abc_action_bar_decor.xml #generated:17
+-keep class android.support.v7.internal.widget.NativeActionModeAwareLayout { <init>(...); }
+
+# view res/layout/abc_action_bar_tab.xml #generated:17
+-keep class android.support.v7.internal.widget.ScrollingTabContainerView$TabView { <init>(...); }
+
+# view res/layout/abc_search_view.xml #generated:85
+-keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# view AndroidManifest.xml #generated:73
+-keep class com.example.ust_rice.Account { <init>(...); }
+
+# view AndroidManifest.xml #generated:65
+-keep class com.example.ust_rice.Favourites { <init>(...); }
+
+# view AndroidManifest.xml #generated:101
+-keep class com.example.ust_rice.FoodItem { <init>(...); }
+
+# view AndroidManifest.xml #generated:33
+-keep class com.example.ust_rice.FoodMenu { <init>(...); }
+
+# view AndroidManifest.xml #generated:41
+-keep class com.example.ust_rice.FoodMenuSearch { <init>(...); }
+
+# view AndroidManifest.xml #generated:18
+-keep class com.example.ust_rice.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:23
+-keep class com.example.ust_rice.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:81
+-keep class com.example.ust_rice.RRank { <init>(...); }
+
+# view AndroidManifest.xml #generated:57
+-keep class com.example.ust_rice.Ranking { <init>(...); }
+
+# view AndroidManifest.xml #generated:97
+-keep class com.example.ust_rice.ReNutrition { <init>(...); }
+
+# view AndroidManifest.xml #generated:93
+-keep class com.example.ust_rice.RePreference { <init>(...); }
+
+# view AndroidManifest.xml #generated:85
+-keep class com.example.ust_rice.ReRank { <init>(...); }
+
+# view AndroidManifest.xml #generated:89
+-keep class com.example.ust_rice.ReRanking { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class com.example.ust_rice.Recommend { <init>(...); }
+
+# onClick res/layout/activity_favourites.xml #generated:60
+# onClick res/layout/activity_food_menu.xml #generated:394
+# onClick res/layout/activity_main.xml #generated:61
+# onClick res/layout/activity_ranking.xml #generated:145
+# onClick res/layout/activity_re_nutrition.xml #generated:88
+# onClick res/layout/activity_re_preference.xml #generated:88
+# onClick res/layout/activity_re_ranking.xml #generated:89
+# onClick res/layout/activity_recommend.xml #generated:201
+# onClick res/layout/fragment_favourites.xml #generated:60
+# onClick res/layout/fragment_food_menu.xml #generated:60
+# onClick res/layout/fragment_re_nutrition.xml #generated:89
+# onClick res/layout/fragment_re_preference.xml #generated:89
+# onClick res/layout/fragment_re_ranking.xml #generated:90
+# onClick res/layout/fragment_recommend.xml #generated:96
+-keepclassmembers class * { *** goAccount(...); }
+
+# onClick res/layout/activity_account.xml #generated:51
+# onClick res/layout/activity_food_menu.xml #generated:384
+# onClick res/layout/activity_main.xml #generated:51
+# onClick res/layout/activity_ranking.xml #generated:135
+# onClick res/layout/activity_re_nutrition.xml #generated:78
+# onClick res/layout/activity_re_preference.xml #generated:78
+# onClick res/layout/activity_re_ranking.xml #generated:79
+# onClick res/layout/activity_recommend.xml #generated:191
+# onClick res/layout/fragment_account.xml #generated:51
+# onClick res/layout/fragment_food_menu.xml #generated:50
+# onClick res/layout/fragment_re_nutrition.xml #generated:79
+# onClick res/layout/fragment_re_preference.xml #generated:79
+# onClick res/layout/fragment_re_ranking.xml #generated:80
+# onClick res/layout/fragment_recommend.xml #generated:86
+-keepclassmembers class * { *** goFavourites(...); }
+
+# onClick res/layout/activity_account.xml #generated:21
+# onClick res/layout/activity_favourites.xml #generated:21
+# onClick res/layout/activity_main.xml #generated:21
+# onClick res/layout/activity_ranking.xml #generated:106
+# onClick res/layout/activity_re_nutrition.xml #generated:49
+# onClick res/layout/activity_re_preference.xml #generated:49
+# onClick res/layout/activity_re_ranking.xml #generated:50
+# onClick res/layout/activity_recommend.xml #generated:162
+# onClick res/layout/fragment_account.xml #generated:21
+# onClick res/layout/fragment_favourites.xml #generated:21
+# onClick res/layout/fragment_re_nutrition.xml #generated:50
+# onClick res/layout/fragment_re_preference.xml #generated:50
+# onClick res/layout/fragment_re_ranking.xml #generated:51
+# onClick res/layout/fragment_recommend.xml #generated:57
+-keepclassmembers class * { *** goFood(...); }
+
+# onClick res/layout/fragment_recommend.xml #generated:40
+-keepclassmembers class * { *** goNut(...); }
+
+# onClick res/layout/fragment_recommend.xml #generated:31
+-keepclassmembers class * { *** goPref(...); }
+
+# onClick res/layout/activity_re_nutrition.xml #generated:16
+# onClick res/layout/activity_re_nutrition.xml #generated:24
+# onClick res/layout/activity_re_nutrition.xml #generated:32
+# onClick res/layout/activity_re_preference.xml #generated:16
+# onClick res/layout/activity_re_preference.xml #generated:24
+# onClick res/layout/activity_re_preference.xml #generated:32
+# onClick res/layout/activity_re_ranking.xml #generated:17
+# onClick res/layout/activity_re_ranking.xml #generated:25
+# onClick res/layout/activity_re_ranking.xml #generated:33
+# onClick res/layout/fragment_re_nutrition.xml #generated:17
+# onClick res/layout/fragment_re_nutrition.xml #generated:25
+# onClick res/layout/fragment_re_nutrition.xml #generated:33
+# onClick res/layout/fragment_re_preference.xml #generated:17
+# onClick res/layout/fragment_re_preference.xml #generated:25
+# onClick res/layout/fragment_re_preference.xml #generated:33
+# onClick res/layout/fragment_re_ranking.xml #generated:18
+# onClick res/layout/fragment_re_ranking.xml #generated:26
+# onClick res/layout/fragment_re_ranking.xml #generated:34
+# onClick res/layout/fragment_recommend.xml #generated:22
+-keepclassmembers class * { *** goRank(...); }
+
+# onClick res/layout/activity_account.xml #generated:41
+# onClick res/layout/activity_favourites.xml #generated:41
+# onClick res/layout/activity_food_menu.xml #generated:374
+# onClick res/layout/activity_main.xml #generated:41
+# onClick res/layout/activity_re_nutrition.xml #generated:68
+# onClick res/layout/activity_re_preference.xml #generated:68
+# onClick res/layout/activity_re_ranking.xml #generated:69
+# onClick res/layout/activity_recommend.xml #generated:181
+# onClick res/layout/fragment_account.xml #generated:41
+# onClick res/layout/fragment_favourites.xml #generated:41
+# onClick res/layout/fragment_food_menu.xml #generated:40
+# onClick res/layout/fragment_re_nutrition.xml #generated:69
+# onClick res/layout/fragment_re_preference.xml #generated:69
+# onClick res/layout/fragment_re_ranking.xml #generated:70
+# onClick res/layout/fragment_recommend.xml #generated:76
+-keepclassmembers class * { *** goRanking(...); }
+
+# onClick res/layout/activity_account.xml #generated:31
+# onClick res/layout/activity_favourites.xml #generated:31
+# onClick res/layout/activity_food_menu.xml #generated:364
+# onClick res/layout/activity_main.xml #generated:31
+# onClick res/layout/activity_ranking.xml #generated:116
+# onClick res/layout/fragment_account.xml #generated:31
+# onClick res/layout/fragment_favourites.xml #generated:31
+# onClick res/layout/fragment_food_menu.xml #generated:30
+-keepclassmembers class * { *** goRecommend(...); }
+
+# onClick res/layout/activity_food_menu.xml #generated:171
+# onClick res/layout/activity_food_menu.xml #generated:180
+# onClick res/layout/activity_food_menu.xml #generated:195
+# onClick res/layout/activity_food_menu.xml #generated:203
+-keepclassmembers class * { *** mainCuisine(...); }
+
+# onClick res/layout/activity_food_menu.xml #generated:293
+# onClick res/layout/activity_food_menu.xml #generated:302
+# onClick res/layout/activity_food_menu.xml #generated:317
+# onClick res/layout/activity_food_menu.xml #generated:325
+-keepclassmembers class * { *** mainSort(...); }
+
+# onClick res/layout/activity_food_menu.xml #generated:106
+# onClick res/layout/activity_food_menu.xml #generated:121
+# onClick res/layout/activity_food_menu.xml #generated:129
+# onClick res/layout/activity_food_menu.xml #generated:89
+# onClick res/layout/activity_food_menu.xml #generated:98
+-keepclassmembers class * { *** mainTime(...); }
+

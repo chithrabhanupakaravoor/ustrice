@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UST RICE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_recommend">Recommend</string>
+    <string name="title_activity_food_menu">FoodMenu</string>
+    <string name="title_activity_ranking">Ranking</string>
+    <string name="title_activity_favourites">Favourites</string>
+    <string name="title_activity_account">Account</string>
+    <string name="title_activity_rrank">RRank</string>
+    <string name="title_activity_re_rank">ReRank</string>
+    <string name="title_activity_re_ranking">ReRanking</string>
+    <string name="title_activity_re_preference">RePreference</string>
+    <string name="title_activity_re_nutrition">ReNutrition</string>
+    <string name="home">Home</string>
+    <string name="ranking">Ranking</string>
+    <string name="food">Food</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="favourites">Favourites</string>
+    <string name="account">Account</string>
+    <!-- Food Menu -->
+    <string name="canteen">Canteen</string>
+    <string name="time">Time</string>
+    <string name="cuisine">Cuisine</string>
+
+    <!-- Ranking -->
+    <string name="most_ordered">Most Ordered</string>
+    <string name="most_rated">Most rated</string>
+    <string name="by_week">By Week</string>
+    <string name="by_month">By Month</string>
+    <string name="rank">Rank</string>
+    <string name="price">Price</string>
+    <string name="rating">Rating</string>
+    <string name="title_activity_food_menu_search">FoodMenuSearch</string>
+    <string name="title_activity_food_item">FoodItem</string>
+
+</resources>
