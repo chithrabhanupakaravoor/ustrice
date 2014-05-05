@@ -10,18 +10,18 @@
     tools:context=".MyRecord" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tvItemFoodName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Food Name"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
-        android:weightSum="2" >
+        android:weightSum="3" >
 
         <ImageView
             android:id="@+id/imageView1"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/ustricelogo" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -38,39 +38,101 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/tvItemCanteen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Canteen: "
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/tvItemTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Offering Time: "
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/tvItemCuisine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cuisine: "
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvItemPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Price: "
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/tvItemRating"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Rating: "
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/tvItemNut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nutrition: "
-                android:textSize="15dp" />
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvItemCanteen2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text=" "
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvItemTime2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text=" "
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvItemCuisine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text=" "
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvItemPrice2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text=" "
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvItemRating2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text=" "
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvItemNut2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text=" "
+                android:textSize="15sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -79,22 +141,35 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
-        android:weightSum="2
+        android:weightSum="3
         " >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/bOrder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Order" />
+            android:onClick="itemOrder"
+            android:text="Order"
+            android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/bList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Add to list" />
+            android:onClick="addToOderList"
+            android:text="Add to list"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/bFavourites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="addToFavour"
+            android:text="Favorites"
+            android:textSize="15sp" />
     </LinearLayout>
 
 </LinearLayout>

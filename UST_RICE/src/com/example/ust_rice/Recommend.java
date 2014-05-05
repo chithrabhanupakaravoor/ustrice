@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class Recommend extends Activity {
 
@@ -89,7 +90,9 @@ public class Recommend extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		if (id == R.id.action_order_list) {
+			Intent i = new Intent(this, FoodOrderList.class);
+			startActivity(i);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

@@ -21,14 +21,14 @@ import android.widget.ImageButton;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.Toast;
 import android.widget.TableRow.LayoutParams;
 import android.widget.TextView;
 
 public class Ranking extends Activity {
 
-
 	RadioGroup rgRanking1;
-	//RadioButton rbMostOrdered, rbMostRated;
+	// RadioButton rbMostOrdered, rbMostRated;
 
 	TableLayout tlRanking;
 	TableRow trRanking;
@@ -51,8 +51,8 @@ public class Ranking extends Activity {
 		StrictMode.enableDefaults();
 
 		rgRanking1 = (RadioGroup) findViewById(R.id.rgRanking1);
-		//rbMostOrdered = (RadioButton) findViewById(R.id.rbMostOrdered);
-		//rbMostRated = (RadioButton) findViewById(R.id.rbMostRated);
+		// rbMostOrdered = (RadioButton) findViewById(R.id.rbMostOrdered);
+		// rbMostRated = (RadioButton) findViewById(R.id.rbMostRated);
 		tvVariable = (TextView) findViewById(R.id.tvRate);
 		tlRanking = (TableLayout) findViewById(R.id.tlRanking);
 
@@ -81,8 +81,8 @@ public class Ranking extends Activity {
 
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("sortBy", ranking_switch));
-			JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL + "rank.php",
-					params);
+			JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL
+					+ "rank.php", params);
 
 			for (int i = 0; i < jArray.length(); i++) {
 				JSONObject json = jArray.getJSONObject(i);
@@ -215,6 +215,8 @@ public class Ranking extends Activity {
 		mbFood = (ImageButton) findViewById(R.id.mbFood);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
+		finish();
+		overridePendingTransition(0, 0);
 	}
 
 	public void goRecommend(View view) {
@@ -222,6 +224,8 @@ public class Ranking extends Activity {
 		mbRecommend = (ImageButton) findViewById(R.id.mbRecommend);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
+		finish();
+		overridePendingTransition(0, 0);
 	}
 
 	public void goFavourites(View view) {
@@ -229,6 +233,8 @@ public class Ranking extends Activity {
 		mbFavourites = (ImageButton) findViewById(R.id.mbFavourites);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
+		finish();
+		overridePendingTransition(0, 0);
 	}
 
 	public void goAccount(View view) {
@@ -236,12 +242,6 @@ public class Ranking extends Activity {
 		mbAccount = (ImageButton) findViewById(R.id.mbAccount);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
-	}
-
-	@Override
-	protected void onPause() {
-		// TODO Auto-generated method stub
-		super.onPause();
 		finish();
 		overridePendingTransition(0, 0);
 	}
@@ -260,10 +260,11 @@ public class Ranking extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		if (id == R.id.action_order_list) {
+			Intent i = new Intent(this, FoodOrderList.class);
+			startActivity(i);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
 }

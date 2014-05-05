@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -53,12 +54,12 @@ public class MainActivity extends Activity {
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
 	}
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.ranking, menu);
 		return true;
 	}
 
@@ -68,7 +69,9 @@ public class MainActivity extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		if (id == R.id.action_order_list) {
+			Intent i = new Intent(this, FoodOrderList.class);
+			startActivity(i);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

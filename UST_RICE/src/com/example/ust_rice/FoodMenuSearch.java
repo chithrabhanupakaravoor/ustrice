@@ -20,15 +20,23 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FoodMenuSearch extends Activity {
-	TextView textView1, textView2, textView3, textView4, textView5;
 
+	ArrayList<String> foodID = new ArrayList<String>();
+	ArrayList<String> name = new ArrayList<String>();
+	ArrayList<String> canteen = new ArrayList<String>();
+	ArrayList<String> time = new ArrayList<String>();
+	ArrayList<String> cuisine = new ArrayList<String>();
+	ArrayList<String> price = new ArrayList<String>();
+	ArrayList<String> rating = new ArrayList<String>();
+	ArrayList<String> nut = new ArrayList<String>();
 
-	String[] name = new String[10];
-	String[] canteen = new String[10];
-	int[] price = new int[10];
-	String[] a = new String[5];
+	String[] a = new String[10];
+	String itemFoodID, itemName, itemCanteen, itemTime, itemCuisine, itemPrice,
+			itemRating, itemNut;
+
 	JSONParser jsonParser = new JSONParser();
 
 	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
@@ -36,34 +44,64 @@ public class FoodMenuSearch extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_food_menu_search);
-		
+
 		StrictMode.enableDefaults();
-		
-		textView1 = (TextView) findViewById(R.id.textView1);
 
 		Intent intent = getIntent();
 
-		a[0] = intent.getStringExtra("sCanteen");
-		a[1] = intent.getStringExtra("sTime");
-		a[2] = intent.getStringExtra("sCuisine");
-		a[3] = intent.getStringExtra("sPrice");
-		a[4] = intent.getStringExtra("sSortby");
+		if (intent.getStringExtra("sCanteen").equals("canteenAll")) {
+			a[0] = "canteenA";
+			a[1] = "canteenB";
+		} else {
+			a[0] = intent.getStringExtra("sCanteen");
+			a[1] = "";
+		}
+
+		a[2] = intent.getStringExtra("sTime");
+
+		if (intent.getStringExtra("sCuisine").equals("cuisineAll")) {
+			a[3] = "chinese";
+			a[4] = "western";
+			a[5] = "others";
+		} else {
+			a[3] = intent.getStringExtra("sCuisine");
+			a[4] = "";
+			a[5] = "";
+		}
+
+		a[6] = intent.getStringExtra("sPrice");
+		a[7] = intent.getStringExtra("sSortby");
 
 		getData();
-		
+
 		ListAdapter adapter = new ListAdapter(this, name, canteen, price);
 		ListView list = (ListView) findViewById(R.id.listView1);
 		list.setAdapter(adapter);
 		list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-            	Intent i = new Intent(FoodMenuSearch.this, FoodItem.class);
-        		startActivity(i);
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				itemFoodID = foodID.get(position);
+				itemName = name.get(position);
+				itemCanteen = canteen.get(position);
+				itemTime = time.get(position);
+				itemCuisine = cuisine.get(position);
+				itemPrice = price.get(position);
+				itemRating = rating.get(position);
 
-            }
-        });
+				Intent i = new Intent(FoodMenuSearch.this, FoodItem.class);
+				i.putExtra("itemFoodID", itemFoodID);
+				i.putExtra("itemName", itemName);
+				i.putExtra("itemCanteen", itemCanteen);
+				i.putExtra("itemTime", itemTime);
+				i.putExtra("itemCuisine", itemCuisine);
+				i.putExtra("itemPrice", itemPrice);
+				i.putExtra("itemRating", itemRating);
+				i.putExtra("itemNut", itemNut);
+				startActivity(i);
+			}
+		});
 
 	}
 
@@ -72,21 +110,27 @@ public class FoodMenuSearch extends Activity {
 		try {
 
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
-//			params.add(new BasicNameValuePair("canteen", a[0]));
-//			params.add(new BasicNameValuePair("offering", a[1]));
-//			params.add(new BasicNameValuePair("cuisine", a[2]));
-//			params.add(new BasicNameValuePair("priceFrom", "0"));
-//			params.add(new BasicNameValuePair("priceTo", a[3]));
-			params.add(new BasicNameValuePair("sortBy", "rating"));
-			JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL + "rank.php",
-					params);
+			params.add(new BasicNameValuePair("canteen1", a[0]));
+			params.add(new BasicNameValuePair("canteen2", a[1]));
+			params.add(new BasicNameValuePair("offering", a[2]));
+			params.add(new BasicNameValuePair("cuisine1", a[3]));
+			params.add(new BasicNameValuePair("cuisine2", a[4]));
+			params.add(new BasicNameValuePair("cuisine3", a[5]));
+			params.add(new BasicNameValuePair("priceFrom", "0"));
+			params.add(new BasicNameValuePair("priceTo", a[6]));
+			params.add(new BasicNameValuePair("sortBy", a[7]));
+			JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL
+					+ "search.php", params);
 
 			for (int i = 0; i < jArray.length(); i++) {
 				JSONObject json = jArray.getJSONObject(i);
-
-				name[i] = json.getString("food_name");
-				canteen[i] = json.getString("canteen");
-				price[i] = json.getInt("price");
+				foodID.add(json.getString("food_id"));
+				name.add(json.getString("food_name"));
+				canteen.add(json.getString("canteen"));
+				time.add(json.getString("offering"));
+				cuisine.add(json.getString("cuisine"));
+				price.add(json.getString("price"));
+				rating.add(json.getString("rating"));
 
 			}
 
@@ -102,22 +146,24 @@ public class FoodMenuSearch extends Activity {
 	// ListView list = (ListView) findViewById(R.id.listView1);
 	// list.setAdapter(adapter);
 	// }
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.food_menu_search, menu);
+		getMenuInflater().inflate(R.menu.ranking, menu);
 		return true;
 	}
-
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		if (id == R.id.action_order_list) {
+			Intent i = new Intent(this, FoodOrderList.class);
+			startActivity(i);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

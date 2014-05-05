@@ -1,9 +1,11 @@
 package com.example.ust_rice;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class RePreference extends Activity {
 
@@ -28,10 +30,11 @@ public class RePreference extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		if (id == R.id.action_order_list) {
+			Intent i = new Intent(this, FoodOrderList.class);
+			startActivity(i);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
 }
