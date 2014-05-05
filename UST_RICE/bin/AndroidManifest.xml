@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ust_rice"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.example.ust_rice.UserData"
+        android:allowBackup="true"
+        android:icon="@drawable/ustricelogo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.ust_rice.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.example.ust_rice.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.FoodMenu"
+            android:label="@string/title_activity_food_menu"
+            android:parentActivityName="com.example.ust_rice.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ust_rice.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.FoodMenuSearch"
+            android:label="@string/title_activity_food_menu"
+            android:parentActivityName="com.example.ust_rice.FoodMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ust_rice.FoodMenu" />
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.Recommend"
+            android:label="@string/title_activity_recommend"
+            android:parentActivityName="com.example.ust_rice.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ust_rice.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.Ranking"
+            android:label="@string/title_activity_ranking"
+            android:parentActivityName="com.example.ust_rice.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ust_rice.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.Favourites"
+            android:label="@string/title_activity_favourites"
+            android:parentActivityName="com.example.ust_rice.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ust_rice.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.Account"
+            android:label="@string/title_activity_account"
+            android:parentActivityName="com.example.ust_rice.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ust_rice.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.RRank"
+            android:label="@string/title_activity_rrank" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.ReRank"
+            android:label="@string/title_activity_re_rank" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.ReRanking"
+            android:label="@string/title_activity_re_ranking" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.RePreference"
+            android:label="@string/title_activity_re_preference" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.ReNutrition"
+            android:label="@string/title_activity_re_nutrition" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.FoodItem"
+            android:label="@string/title_activity_food_item"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.FavouritesItem"
+            android:label="@string/title_activity_favourites_item"
+            android:parentActivityName="com.example.ust_rice.Favourites"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.FoodOrderList"
+            android:label="@string/title_activity_food_order_list"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
+        </activity>
+        <activity
+            android:name="com.example.ust_rice.FoodOrderListItem"
+            android:label="@string/title_activity_food_order_list_item"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
+        </activity>
+    </application>
+
+</manifest>
