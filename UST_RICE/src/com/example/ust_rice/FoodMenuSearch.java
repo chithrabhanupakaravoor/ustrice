@@ -24,18 +24,19 @@ import android.widget.Toast;
 
 public class FoodMenuSearch extends Activity {
 
-	ArrayList<String> foodID = new ArrayList<String>();
-	ArrayList<String> name = new ArrayList<String>();
-	ArrayList<String> canteen = new ArrayList<String>();
-	ArrayList<String> time = new ArrayList<String>();
-	ArrayList<String> cuisine = new ArrayList<String>();
-	ArrayList<String> price = new ArrayList<String>();
-	ArrayList<String> rating = new ArrayList<String>();
-	ArrayList<String> nut = new ArrayList<String>();
+	public ArrayList<String> foodID = new ArrayList<String>();
+	public ArrayList<String> name = new ArrayList<String>();
+	public ArrayList<String> canteen = new ArrayList<String>();
+	public ArrayList<String> time = new ArrayList<String>();
+	public ArrayList<String> cuisine = new ArrayList<String>();
+	public ArrayList<String> price = new ArrayList<String>();
+	public ArrayList<String> rating = new ArrayList<String>();
+	public ArrayList<String> nut = new ArrayList<String>();
 
-	String[] a = new String[10];
-	String itemFoodID, itemName, itemCanteen, itemTime, itemCuisine, itemPrice,
-			itemRating, itemNut;
+	public String[] a = {"canteenA", "canteenB", "allDay", "chinese",  "western", "others", "99","canteen"};
+
+	public String itemFoodID, itemName, itemCanteen, itemTime, itemCuisine,
+			itemPrice, itemRating, itemNut;
 
 	JSONParser jsonParser = new JSONParser();
 
@@ -48,29 +49,32 @@ public class FoodMenuSearch extends Activity {
 		StrictMode.enableDefaults();
 
 		Intent intent = getIntent();
+		try {
+			if (intent.getStringExtra("sCanteen").equals("canteenAll")) {
+				a[0] = "canteenA";
+				a[1] = "canteenB";
+			} else {
+				a[0] = intent.getStringExtra("sCanteen");
+				a[1] = "";
+			}
 
-		if (intent.getStringExtra("sCanteen").equals("canteenAll")) {
-			a[0] = "canteenA";
-			a[1] = "canteenB";
-		} else {
-			a[0] = intent.getStringExtra("sCanteen");
-			a[1] = "";
+			a[2] = intent.getStringExtra("sTime");
+
+			if (intent.getStringExtra("sCuisine").equals("cuisineAll")) {
+				a[3] = "chinese";
+				a[4] = "western";
+				a[5] = "others";
+			} else {
+				a[3] = intent.getStringExtra("sCuisine");
+				a[4] = "";
+				a[5] = "";
+			}
+
+			a[6] = intent.getStringExtra("sPrice");
+			a[7] = intent.getStringExtra("sSortby");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
 		}
-
-		a[2] = intent.getStringExtra("sTime");
-
-		if (intent.getStringExtra("sCuisine").equals("cuisineAll")) {
-			a[3] = "chinese";
-			a[4] = "western";
-			a[5] = "others";
-		} else {
-			a[3] = intent.getStringExtra("sCuisine");
-			a[4] = "";
-			a[5] = "";
-		}
-
-		a[6] = intent.getStringExtra("sPrice");
-		a[7] = intent.getStringExtra("sSortby");
 
 		getData();
 
@@ -146,7 +150,7 @@ public class FoodMenuSearch extends Activity {
 	// ListView list = (ListView) findViewById(R.id.listView1);
 	// list.setAdapter(adapter);
 	// }
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -154,7 +158,7 @@ public class FoodMenuSearch extends Activity {
 		getMenuInflater().inflate(R.menu.ranking, menu);
 		return true;
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
