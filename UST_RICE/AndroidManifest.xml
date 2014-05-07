@@ -118,10 +118,6 @@
             android:label="@string/title_activity_food_order_list_item"
             android:theme="@android:style/Theme.Holo.Light.Dialog" >
         </activity>
-        <activity
-            android:name="com.example.ust_rice.Ticket"
-            android:label="@string/title_activity_ticket" >
-        </activity>
     </application>
 
 </manifest>
