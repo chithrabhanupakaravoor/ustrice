@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class FoodOrderListItem extends Activity {
 
 	TextView tvItemFoodName, tvItemCanteen, tvItemTime, tvItemCuisine,
-			tvItemPrice, tvItemRating, tvItemNut;
+			tvItemPrice, tvItemRating;
 
 	String name;
 	int position;
@@ -30,7 +30,6 @@ public class FoodOrderListItem extends Activity {
 		tvItemCuisine = (TextView) findViewById(R.id.tvItemCuisine2);
 		tvItemPrice = (TextView) findViewById(R.id.tvItemPrice2);
 		tvItemRating = (TextView) findViewById(R.id.tvItemRating2);
-		tvItemNut = (TextView) findViewById(R.id.tvItemNut2);
 
 		tvItemFoodName.setText(intent.getStringExtra("itemName"));
 		tvItemCanteen.setText(intent.getStringExtra("itemCanteen"));
@@ -38,7 +37,6 @@ public class FoodOrderListItem extends Activity {
 		tvItemCuisine.setText(intent.getStringExtra("itemCuisine"));
 		tvItemPrice.setText("$" + intent.getStringExtra("itemPrice"));
 		tvItemRating.setText(intent.getStringExtra("itemRating"));
-		tvItemNut.setText(intent.getStringExtra("itemNut"));
 
 		name = intent.getStringExtra("itemName");
 		position = intent.getIntExtra("itemPosition", 0);

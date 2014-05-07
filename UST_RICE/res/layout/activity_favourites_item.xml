@@ -72,12 +72,6 @@
                 android:text="Rating: "
                 android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/tvItemNut"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nutrition: "
-                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -126,13 +120,6 @@
                 android:text=" "
                 android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/tvItemNut2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:text=" "
-                android:textSize="15sp" />
         </LinearLayout>
     </LinearLayout>
 

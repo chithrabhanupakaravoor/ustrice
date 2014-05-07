@@ -12,21 +12,19 @@ public class UserData extends Application {
 	private ArrayList<String> cuisine = new ArrayList<String>();
 	private ArrayList<String> price = new ArrayList<String>();
 	private ArrayList<String> rating = new ArrayList<String>();
-	private ArrayList<String> nut = new ArrayList<String>();
+
 	private String userID = "1";
 
-	public void setUserID(String id){
+	public void setUserID(String id) {
 		userID = id;
 	}
-	
-	public String getUserID(){
+
+	public String getUserID() {
 		return userID;
 	}
-	
-	
+
 	public void addList(String iFoodID, String iName, String iCanteen,
-			String iOfferingTime, String iCuisine, String iPrice,
-			String iRating, String iNut) {
+			String iOfferingTime, String iCuisine, String iPrice, String iRating) {
 		foodID.add(iFoodID);
 		name.add(iName);
 		canteen.add(iCanteen);
@@ -34,7 +32,6 @@ public class UserData extends Application {
 		cuisine.add(iCuisine);
 		price.add(iPrice);
 		rating.add(iRating);
-		nut.add(iNut);
 
 	}
 
@@ -46,7 +43,7 @@ public class UserData extends Application {
 		cuisine.remove(i);
 		price.remove(i);
 		rating.remove(i);
-		nut.remove(i);
+
 	}
 
 	public void clearList() {
@@ -57,7 +54,7 @@ public class UserData extends Application {
 		cuisine.clear();
 		price.clear();
 		rating.clear();
-		nut.clear();
+
 	}
 
 	public ArrayList<String> getFoodIDList() {
@@ -88,7 +85,4 @@ public class UserData extends Application {
 		return rating;
 	}
 
-	public ArrayList<String> getNutList() {
-		return nut;
-	}
 }

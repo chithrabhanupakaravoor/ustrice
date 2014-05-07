@@ -23,7 +23,7 @@ import android.widget.Toast;
 public class FavouritesItem extends Activity {
 
 	TextView tvItemFoodName, tvItemCanteen, tvItemTime, tvItemCuisine,
-			tvItemPrice, tvItemRating, tvItemNut;
+			tvItemPrice, tvItemRating;
 
 	String userID;
 	String foodID, name, canteen, offeringTime, cuisine, price, rating, nut;
@@ -43,7 +43,6 @@ public class FavouritesItem extends Activity {
 		tvItemCuisine = (TextView) findViewById(R.id.tvItemCuisine2);
 		tvItemPrice = (TextView) findViewById(R.id.tvItemPrice2);
 		tvItemRating = (TextView) findViewById(R.id.tvItemRating2);
-		tvItemNut = (TextView) findViewById(R.id.tvItemNut2);
 
 		userID = ((UserData) this.getApplication()).getUserID();
 		foodID = intent.getStringExtra("itemFoodID");
@@ -53,7 +52,6 @@ public class FavouritesItem extends Activity {
 		cuisine = intent.getStringExtra("itemCuisine");
 		price = intent.getStringExtra("itemPrice");
 		rating = intent.getStringExtra("itemRating");
-		nut = intent.getStringExtra("itemNut");
 
 		tvItemFoodName.setText(name);
 		tvItemCanteen.setText(canteen);
@@ -61,7 +59,6 @@ public class FavouritesItem extends Activity {
 		tvItemCuisine.setText(cuisine);
 		tvItemPrice.setText("$" + price);
 		tvItemRating.setText(rating);
-		tvItemNut.setText(nut);
 
 	}
 
@@ -119,7 +116,7 @@ public class FavouritesItem extends Activity {
 	public void addToOderList(View view) {
 		if (checkOfferingTime()) {
 			((UserData) this.getApplication()).addList(foodID, name, canteen,
-					offeringTime, cuisine, price, rating, nut);
+					offeringTime, cuisine, price, rating);
 			Toast.makeText(this, name + " is added to Order List!",
 					Toast.LENGTH_SHORT).show();
 		} else if (offeringTime.equals("allDay"))
@@ -138,8 +135,8 @@ public class FavouritesItem extends Activity {
 
 			params.add(new BasicNameValuePair("userID", "1"));
 			params.add(new BasicNameValuePair("foodID", foodID));
-			JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL
-					+ "deleteFromFavour.php", params);
+			jsonParser.makeHttpRequest(jsonParser.URL + "deleteFromFavour.php",
+					params);
 			Toast.makeText(FavouritesItem.this,
 					name + " is deleted from Favourite!", Toast.LENGTH_SHORT)
 					.show();

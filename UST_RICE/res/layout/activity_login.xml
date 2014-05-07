@@ -60,12 +60,12 @@
 
         <Button
             android:id="@+id/submit"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:onClick="submit"
             android:text="Submit"
-            android:textSize="15dp" />
+            android:textSize="20dp" />
     </LinearLayout>
 
 </LinearLayout>

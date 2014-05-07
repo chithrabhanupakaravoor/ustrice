@@ -24,7 +24,6 @@ public class LoginActivity extends Activity {
 	private JSONParser jsonParser = new JSONParser();
 	private EditText username;
 	private EditText password;
-	private Button submit;
 	private ProgressDialog dialog;
 	private int success;
 	private String message = new String();

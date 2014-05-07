@@ -25,10 +25,12 @@ import android.widget.Toast;
 public class FoodItem extends Activity {
 
 	TextView tvItemFoodName, tvItemCanteen, tvItemTime, tvItemCuisine,
-			tvItemPrice, tvItemRating, tvItemNut;
+			tvItemPrice, tvItemRating;
 
 	String userID;
-	String foodID, name, canteen, offeringTime, cuisine, price, rating, nut;
+	String foodID = "1", name = "foodA", canteen = "CanteenA",
+			offeringTime = "allDay", cuisine = "chinese", price = "20",
+			rating = "99";
 
 	JSONParser jsonParser = new JSONParser();
 
@@ -47,26 +49,28 @@ public class FoodItem extends Activity {
 		tvItemCuisine = (TextView) findViewById(R.id.tvItemCuisine2);
 		tvItemPrice = (TextView) findViewById(R.id.tvItemPrice2);
 		tvItemRating = (TextView) findViewById(R.id.tvItemRating2);
-		tvItemNut = (TextView) findViewById(R.id.tvItemNut2);
+		
 
 		userID = ((UserData) this.getApplication()).getUserID();
-
-		foodID = intent.getStringExtra("itemFoodID");
-		name = intent.getStringExtra("itemName");
-		canteen = intent.getStringExtra("itemCanteen");
-		offeringTime = intent.getStringExtra("itemTime");
-		cuisine = intent.getStringExtra("itemCuisine");
-		price = intent.getStringExtra("itemPrice");
-		rating = intent.getStringExtra("itemRating");
-		nut = intent.getStringExtra("itemNut");
-
+		try {
+			foodID = intent.getStringExtra("itemFoodID");
+			name = intent.getStringExtra("itemName");
+			canteen = intent.getStringExtra("itemCanteen");
+			offeringTime = intent.getStringExtra("itemTime");
+			cuisine = intent.getStringExtra("itemCuisine");
+			price = intent.getStringExtra("itemPrice");
+			rating = intent.getStringExtra("itemRating");
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+		}
 		tvItemFoodName.setText(name);
 		tvItemCanteen.setText(canteen);
 		tvItemTime.setText(offeringTime);
 		tvItemCuisine.setText(cuisine);
 		tvItemPrice.setText("$" + price);
 		tvItemRating.setText(rating);
-		tvItemNut.setText(nut);
+		
 
 	}
 
@@ -107,15 +111,15 @@ public class FoodItem extends Activity {
 				params.add(new BasicNameValuePair("userID", userID));
 				params.add(new BasicNameValuePair("foodID", foodID));
 				JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL
-						+ "order.php", params);	
+						+ "order.php", params);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 			}
-			Toast.makeText(this, name + " is ordered!",
-					Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, name + " is ordered!", Toast.LENGTH_SHORT)
+					.show();
 		} else if (offeringTime.equals("allDay"))
-			Toast.makeText(this, "Canteen is Closed!",
-					Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "Canteen is Closed!", Toast.LENGTH_SHORT)
+					.show();
 		else
 			Toast.makeText(this, "Now it is not " + offeringTime + " time!",
 					Toast.LENGTH_SHORT).show();
@@ -124,7 +128,7 @@ public class FoodItem extends Activity {
 	public void addToOderList(View view) {
 		if (checkOfferingTime()) {
 			((UserData) this.getApplication()).addList(foodID, name, canteen,
-					offeringTime, cuisine, price, rating, nut);
+					offeringTime, cuisine, price, rating);
 			Toast.makeText(this, name + " is added to Order List!",
 					Toast.LENGTH_SHORT).show();
 		} else if (offeringTime.equals("allDay"))

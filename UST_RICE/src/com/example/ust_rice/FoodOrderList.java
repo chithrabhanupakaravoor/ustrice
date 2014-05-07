@@ -28,11 +28,11 @@ public class FoodOrderList extends Activity {
 	ArrayList<String> price = new ArrayList<String>();
 	ArrayList<String> rating = new ArrayList<String>();
 	ArrayList<String> nut = new ArrayList<String>();
-	
+
 	String userID;
 	String itemFoodID, itemName, itemCanteen, itemTime, itemCuisine, itemPrice,
-			itemRating, itemNut;
-	
+			itemRating;
+
 	JSONParser jsonParser = new JSONParser();
 
 	@Override
@@ -40,7 +40,7 @@ public class FoodOrderList extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_food_order_list);
 		TextView totalPrice = (TextView) findViewById(R.id.totalPrice);
-		
+
 		userID = ((UserData) this.getApplication()).getUserID();
 		foodID = ((UserData) this.getApplication()).getFoodIDList();
 		name = ((UserData) this.getApplication()).getNameList();
@@ -49,7 +49,6 @@ public class FoodOrderList extends Activity {
 		cuisine = ((UserData) this.getApplication()).getCuisineList();
 		price = ((UserData) this.getApplication()).getPriceList();
 		rating = ((UserData) this.getApplication()).getRatingList();
-		nut = ((UserData) this.getApplication()).getNutList();
 
 		ListAdapter adapter = new ListAdapter(this, name, canteen, price);
 		ListView list = (ListView) findViewById(R.id.listView1);
@@ -77,7 +76,6 @@ public class FoodOrderList extends Activity {
 				i.putExtra("itemCuisine", itemCuisine);
 				i.putExtra("itemPrice", itemPrice);
 				i.putExtra("itemRating", itemRating);
-				i.putExtra("itemNut", itemNut);
 				i.putExtra("itemPosition", position);
 				startActivityForResult(i, 0);
 
@@ -92,24 +90,24 @@ public class FoodOrderList extends Activity {
 		Intent i = new Intent(FoodOrderList.this, FoodOrderList.class);
 		startActivity(i);
 	}
-	
+
 	public void checkOut(View view) {
-		for (int i = 0; i < foodID.size(); i++){
+		for (int i = 0; i < foodID.size(); i++) {
 			try {
 
 				List<NameValuePair> params = new ArrayList<NameValuePair>();
 
 				params.add(new BasicNameValuePair("userID", userID));
 				params.add(new BasicNameValuePair("foodID", foodID.get(i)));
-				jsonParser.makeHttpRequest(jsonParser.URL
-						+ "order.php", params);	
+				jsonParser
+						.makeHttpRequest(jsonParser.URL + "order.php", params);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 			}
 			Toast.makeText(this, name.get(i) + " is ordered!",
 					Toast.LENGTH_SHORT).show();
-		} 
-		
+		}
+
 		((UserData) this.getApplication()).clearList();
 		finish();
 	}

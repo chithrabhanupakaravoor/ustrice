@@ -30,7 +30,7 @@ public class Recommend extends Activity {
 		Date currentTime = new Date();
 
 		if (Integer.parseInt(hour.format(currentTime)) <= 8
-				&& Integer.parseInt(hour.format(currentTime)) >= 21) {
+				|| Integer.parseInt(hour.format(currentTime)) >= 21) {
 			Toast.makeText(this, "Canteen is closed!", Toast.LENGTH_SHORT)
 					.show();
 			return false;
