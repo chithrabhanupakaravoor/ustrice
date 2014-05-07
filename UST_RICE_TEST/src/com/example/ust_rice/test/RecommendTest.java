@@ -9,17 +9,20 @@ import com.example.ust_rice.Account;
 import com.example.ust_rice.Favourites;
 import com.example.ust_rice.FoodMenu;
 import com.example.ust_rice.Ranking;
+import com.example.ust_rice.ReNutrition;
+import com.example.ust_rice.RePreference;
+import com.example.ust_rice.ReRanking;
 import com.example.ust_rice.Recommend;
 
-public class FavouritesTest extends
-		ActivityInstrumentationTestCase2<Favourites> {
+public class RecommendTest extends ActivityInstrumentationTestCase2<Recommend> {
 
-	private Favourites mActivity;
+	private Recommend mActivity;
 
-	ImageButton bFood, bRecommend, bRanking, bAccount;
+	ImageButton bReRanking, bNutrition, bDiet, bFood, bFavourites, bRanking,
+			bAccount;
 
-	public FavouritesTest() {
-		super(Favourites.class);
+	public RecommendTest() {
+		super(Recommend.class);
 	}
 
 	@Override
@@ -27,17 +30,22 @@ public class FavouritesTest extends
 		// this method is called every time before any test execution
 		super.setUp();
 
-		mActivity = (Favourites) getActivity(); // get current activity
+		mActivity = (Recommend) getActivity(); // get current activity
 
+		bReRanking = (ImageButton) mActivity
+				.findViewById(com.example.ust_rice.R.id.reRank);
+		bNutrition = (ImageButton) mActivity
+				.findViewById(com.example.ust_rice.R.id.reNutrition);
+		bDiet = (ImageButton) mActivity
+				.findViewById(com.example.ust_rice.R.id.rePreference);
 		bFood = (ImageButton) mActivity
 				.findViewById(com.example.ust_rice.R.id.mbFood);
-		bRecommend = (ImageButton) mActivity
-				.findViewById(com.example.ust_rice.R.id.mbRecommend);
+		bFavourites = (ImageButton) mActivity
+				.findViewById(com.example.ust_rice.R.id.mbFavourites);
 		bRanking = (ImageButton) mActivity
 				.findViewById(com.example.ust_rice.R.id.mbRanking);
 		bAccount = (ImageButton) mActivity
 				.findViewById(com.example.ust_rice.R.id.mbAccount);
-
 	}
 
 	@Override
@@ -52,7 +60,63 @@ public class FavouritesTest extends
 	public void testView() { // checks if the activity is created
 		assertNotNull(getActivity());
 	}
-	
+
+	@SmallTest
+	public void testReRankingButton() {
+
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(
+				ReRanking.class.getName(), null, false);
+		mActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				// click button and open next activity.
+
+				bReRanking.performClick();
+			}
+		});
+
+		ReRanking nextActivity = (ReRanking) getInstrumentation()
+				.waitForMonitorWithTimeout(activityMonitor, 5000);
+
+		nextActivity.finish();
+	}
+
+	public void testNutButton() {
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(
+				ReNutrition.class.getName(), null, false);
+		mActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				// click button and open next activity.
+
+				bNutrition.performClick();
+			}
+		});
+
+		ReNutrition nextActivity = (ReNutrition) getInstrumentation()
+				.waitForMonitorWithTimeout(activityMonitor, 5000);
+
+		nextActivity.finish();
+	}
+
+	public void testPrefButton() {
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(
+				RePreference.class.getName(), null, false);
+		mActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				// click button and open next activity.
+
+				bDiet.performClick();
+			}
+		});
+
+		RePreference nextActivity = (RePreference) getInstrumentation()
+				.waitForMonitorWithTimeout(activityMonitor, 5000);
+
+		nextActivity.finish();
+	}
+
 	public void testFoodButton() {
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(
 				FoodMenu.class.getName(), null, false);
@@ -89,19 +153,19 @@ public class FavouritesTest extends
 		nextActivity.finish();
 	}
 	
-	public void testRecommendButton() {
+	public void testFavouritesButton() {
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(
-				Recommend.class.getName(), null, false);
+				Favourites.class.getName(), null, false);
 		mActivity.runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
 				// click button and open next activity.
 
-				bRecommend.performClick();
+				bFavourites.performClick();
 			}
 		});
 
-		Recommend nextActivity = (Recommend) getInstrumentation()
+		Favourites nextActivity = (Favourites) getInstrumentation()
 				.waitForMonitorWithTimeout(activityMonitor, 5000);
 
 		nextActivity.finish();
