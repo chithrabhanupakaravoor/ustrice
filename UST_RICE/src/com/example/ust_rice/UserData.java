@@ -13,7 +13,17 @@ public class UserData extends Application {
 	private ArrayList<String> price = new ArrayList<String>();
 	private ArrayList<String> rating = new ArrayList<String>();
 	private ArrayList<String> nut = new ArrayList<String>();
+	private String userID = "1";
 
+	public void setUserID(String id){
+		userID = id;
+	}
+	
+	public String getUserID(){
+		return userID;
+	}
+	
+	
 	public void addList(String iFoodID, String iName, String iCanteen,
 			String iOfferingTime, String iCuisine, String iPrice,
 			String iRating, String iNut) {

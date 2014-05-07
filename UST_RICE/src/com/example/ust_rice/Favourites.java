@@ -18,7 +18,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class Favourites extends Activity {
 
@@ -31,6 +30,7 @@ public class Favourites extends Activity {
 	ArrayList<String> rating = new ArrayList<String>();
 	ArrayList<String> nut = new ArrayList<String>();
 
+	String userID;
 	String[] a = new String[10];
 	String itemFoodID, itemName, itemCanteen, itemTime, itemCuisine, itemPrice,
 			itemRating, itemNut;
@@ -42,7 +42,9 @@ public class Favourites extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_favourites);
 		StrictMode.enableDefaults();
-
+		
+		
+		userID = ((UserData) this.getApplication()).getUserID();
 		getData();
 
 		ListAdapter adapter = new ListAdapter(this, name, canteen, price);
@@ -88,7 +90,7 @@ public class Favourites extends Activity {
 
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 
-			params.add(new BasicNameValuePair("userID", "1"));
+			params.add(new BasicNameValuePair("userID", userID));
 
 			JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL
 					+ "showFavour.php", params);

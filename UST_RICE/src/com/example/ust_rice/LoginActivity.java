@@ -13,10 +13,10 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class LoginActivity extends Activity {
@@ -28,24 +28,38 @@ public class LoginActivity extends Activity {
 	private ProgressDialog dialog;
 	private int success;
 	private String message = new String();
+	String userID = "0";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
 
-		// StrictMode.enableDefaults();
+		StrictMode.enableDefaults();
 		username = (EditText) findViewById(R.id.etUsername);
 		password = (EditText) findViewById(R.id.etPassword);
-		submit = (Button) findViewById(R.id.submit);
-		submit.setOnClickListener(new View.OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				new AttemptLogin().execute();
-			}
-		});
+	}
 
+	public void submit(View view) {
+
+		try {
+			List<NameValuePair> params = new ArrayList<NameValuePair>();
+			params.add(new BasicNameValuePair("username", (username.getText()
+					.toString())));
+			params.add(new BasicNameValuePair("password", (password.getText()
+					.toString())));
+			JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL
+					+ "login.php", params);
+
+			JSONObject json = jArray.getJSONObject(0);
+			userID = json.getString("userID");
+
+		} catch (Exception e) {
+
+		}
+		((UserData) this.getApplication()).setUserID(userID);
+		new AttemptLogin().execute();
 	}
 
 	class AttemptLogin extends AsyncTask<String, String, String> {
@@ -62,7 +76,7 @@ public class LoginActivity extends Activity {
 		}
 
 		@Override
-		protected String doInBackground(String... arg0) {
+		public String doInBackground(String... arg0) {
 			try {
 				List<NameValuePair> params = new ArrayList<NameValuePair>();
 				params.add(new BasicNameValuePair("username", (username
@@ -83,6 +97,7 @@ public class LoginActivity extends Activity {
 
 					Intent i = new Intent(LoginActivity.this,
 							MainActivity.class);
+
 					finish();
 					startActivity(i);
 
@@ -104,6 +119,7 @@ public class LoginActivity extends Activity {
 			else
 				Toast.makeText(LoginActivity.this, "Connection Failed",
 						Toast.LENGTH_SHORT).show();
+
 		}
 	}
 }

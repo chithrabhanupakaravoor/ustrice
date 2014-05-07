@@ -60,14 +60,14 @@ public class Ranking extends Activity {
 				.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 					public void onCheckedChanged(RadioGroup group, int checkedId) {
 						if (checkedId == R.id.rbMostOrdered) {
-							ranking_switch = "rating";
+							ranking_switch = "numOfOrder";
 							createMostOrdered();
-							tvVariable.setText("Rating");
+							tvVariable.setText("Order");
 							tvVariable.setTextColor(0xFFFF3B30);
 						} else if (checkedId == R.id.rbMostRated) {
-							ranking_switch = "numOfOrder";
+							ranking_switch = "rating";
 							createMostRated();
-							tvVariable.setText("Order");
+							tvVariable.setText("Rating");
 							tvVariable.setTextColor(0xFFFF3B30);
 						}
 					}
@@ -143,7 +143,7 @@ public class Ranking extends Activity {
 					LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT, 1));
 			tvRating.setBackgroundColor(0xFFFFFFFF);
 			tvRating.setGravity(0x11);
-			tvRating.setText(Integer.toString(rating[i]));
+			tvRating.setText(Integer.toString(numOfOrder[i]));
 			tvRating.setTextSize(15);
 			trRanking.addView(tvRating);
 
@@ -198,7 +198,7 @@ public class Ranking extends Activity {
 					LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT, 1));
 			tvRating.setBackgroundColor(0xFFFFFFFF);
 			tvRating.setGravity(0x11);
-			tvRating.setText(Integer.toString(numOfOrder[i]));
+			tvRating.setText(Integer.toString(rating[i]));
 			tvRating.setTextSize(15);
 			trRanking.addView(tvRating);
 

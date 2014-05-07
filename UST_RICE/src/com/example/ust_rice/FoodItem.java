@@ -9,6 +9,7 @@ import java.util.List;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -26,6 +27,7 @@ public class FoodItem extends Activity {
 	TextView tvItemFoodName, tvItemCanteen, tvItemTime, tvItemCuisine,
 			tvItemPrice, tvItemRating, tvItemNut;
 
+	String userID;
 	String foodID, name, canteen, offeringTime, cuisine, price, rating, nut;
 
 	JSONParser jsonParser = new JSONParser();
@@ -46,6 +48,8 @@ public class FoodItem extends Activity {
 		tvItemPrice = (TextView) findViewById(R.id.tvItemPrice2);
 		tvItemRating = (TextView) findViewById(R.id.tvItemRating2);
 		tvItemNut = (TextView) findViewById(R.id.tvItemNut2);
+
+		userID = ((UserData) this.getApplication()).getUserID();
 
 		foodID = intent.getStringExtra("itemFoodID");
 		name = intent.getStringExtra("itemName");
@@ -70,7 +74,7 @@ public class FoodItem extends Activity {
 	public boolean checkOfferingTime() {
 		SimpleDateFormat hour = new SimpleDateFormat("HH");
 
-		int offeringStart = 8, offeringEnd = 21;
+		int offeringStart = 0, offeringEnd = 99;
 
 		if (offeringTime.equals("Breakfast")) {
 			offeringStart = 8;
@@ -96,8 +100,23 @@ public class FoodItem extends Activity {
 
 	public void itemOrder(View view) {
 		if (checkOfferingTime()) {
+			try {
 
-		} else
+				List<NameValuePair> params = new ArrayList<NameValuePair>();
+
+				params.add(new BasicNameValuePair("userID", userID));
+				params.add(new BasicNameValuePair("foodID", foodID));
+				JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL
+						+ "order.php", params);	
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+			}
+			Toast.makeText(this, name + " is ordered!",
+					Toast.LENGTH_SHORT).show();
+		} else if (offeringTime.equals("allDay"))
+			Toast.makeText(this, "Canteen is Closed!",
+					Toast.LENGTH_SHORT).show();
+		else
 			Toast.makeText(this, "Now it is not " + offeringTime + " time!",
 					Toast.LENGTH_SHORT).show();
 	}
@@ -108,7 +127,10 @@ public class FoodItem extends Activity {
 					offeringTime, cuisine, price, rating, nut);
 			Toast.makeText(this, name + " is added to Order List!",
 					Toast.LENGTH_SHORT).show();
-		} else
+		} else if (offeringTime.equals("allDay"))
+			Toast.makeText(this, "Canteen is Closed!", Toast.LENGTH_SHORT)
+					.show();
+		else
 			Toast.makeText(this, "Now it is not " + offeringTime + " time!",
 					Toast.LENGTH_SHORT).show();
 
@@ -120,12 +142,21 @@ public class FoodItem extends Activity {
 
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 
-			params.add(new BasicNameValuePair("userID", "1"));
+			params.add(new BasicNameValuePair("userID", userID));
 			params.add(new BasicNameValuePair("foodID", foodID));
 			JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL
-					+ "addToFavour.php", params);
-			Toast.makeText(FoodItem.this, name + " is added to Favourite!",
-					Toast.LENGTH_SHORT).show();
+					+ "checkFavour.php", params);
+			JSONObject json = jArray.getJSONObject(0);
+
+			int contain = json.getInt("contain");
+			if (contain != 1) {
+				jsonParser.makeHttpRequest(jsonParser.URL + "addToFavour.php",
+						params);
+				Toast.makeText(FoodItem.this, name + " is added to Favourite!",
+						Toast.LENGTH_SHORT).show();
+			} else
+				Toast.makeText(FoodItem.this, name + " is already added",
+						Toast.LENGTH_SHORT).show();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 		}

@@ -1,5 +1,9 @@
 package com.example.ust_rice;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,35 +20,59 @@ public class Recommend extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_recommend);
+		checkOfferingTime();
+	}
+
+	@SuppressLint("SimpleDateFormat")
+	public boolean checkOfferingTime() {
+		SimpleDateFormat hour = new SimpleDateFormat("HH");
+
+		Date currentTime = new Date();
+
+		if (Integer.parseInt(hour.format(currentTime)) <= 8
+				&& Integer.parseInt(hour.format(currentTime)) >= 21) {
+			Toast.makeText(this, "Canteen is closed!", Toast.LENGTH_SHORT)
+					.show();
+			return false;
+		} else
+			return true;
 
 	}
-	Button bRanking, bPreferenceb,Nutrition ;
-	ImageButton mbFood, mbRanking, mbFavourites, mbAccount;
+
+	ImageButton bRanking, bPreference, bNutrition, mbFood, mbRanking,
+			mbFavourites, mbAccount;
 
 	public void goRank(View view) {
-		Intent i = new Intent(this, ReRanking.class);
-		bRanking = (Button) findViewById(R.id.re_ranking);
-		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-		startActivity(i);
+		if (checkOfferingTime()) {
+			Intent i = new Intent(this, ReRanking.class);
+			bRanking = (ImageButton) findViewById(R.id.reRank);
+			startActivity(i);
+		}
 	}
+
 	public void goPref(View view) {
-		Intent i = new Intent(this, RePreference.class);
-		bRanking = (Button) findViewById(R.id.re_preference);
-		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-		startActivity(i);
+		if (checkOfferingTime()) {
+			Intent i = new Intent(this, RePreference.class);
+			bPreference = (ImageButton) findViewById(R.id.rePreference);
+			startActivity(i);
+		}
 	}
+
 	public void goNut(View view) {
-		Intent i = new Intent(this, ReNutrition.class);
-		bRanking = (Button) findViewById(R.id.re_nutrition);
-		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-		startActivity(i);
+		if (checkOfferingTime()) {
+			Intent i = new Intent(this, ReNutrition.class);
+			bNutrition = (ImageButton) findViewById(R.id.reNutrition);
+			startActivity(i);
+		}
 	}
-	
+
 	public void goFood(View view) {
 		Intent i = new Intent(this, FoodMenu.class);
 		mbFood = (ImageButton) findViewById(R.id.mbFood);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
+		finish();
+		overridePendingTransition(0, 0);
 	}
 
 	public void goRanking(View view) {
@@ -52,6 +80,8 @@ public class Recommend extends Activity {
 		mbRanking = (ImageButton) findViewById(R.id.mbRanking);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
+		finish();
+		overridePendingTransition(0, 0);
 	}
 
 	public void goFavourites(View view) {
@@ -59,6 +89,8 @@ public class Recommend extends Activity {
 		mbFavourites = (ImageButton) findViewById(R.id.mbFavourites);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
+		finish();
+		overridePendingTransition(0, 0);
 	}
 
 	public void goAccount(View view) {
@@ -66,12 +98,6 @@ public class Recommend extends Activity {
 		mbAccount = (ImageButton) findViewById(R.id.mbAccount);
 		i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 		startActivity(i);
-	}
-
-	@Override
-	protected void onPause() {
-		// TODO Auto-generated method stub
-		super.onPause();
 		finish();
 		overridePendingTransition(0, 0);
 	}
@@ -97,7 +123,5 @@ public class Recommend extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
-
 
 }

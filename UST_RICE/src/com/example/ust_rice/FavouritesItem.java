@@ -25,6 +25,7 @@ public class FavouritesItem extends Activity {
 	TextView tvItemFoodName, tvItemCanteen, tvItemTime, tvItemCuisine,
 			tvItemPrice, tvItemRating, tvItemNut;
 
+	String userID;
 	String foodID, name, canteen, offeringTime, cuisine, price, rating, nut;
 
 	JSONParser jsonParser = new JSONParser();
@@ -44,6 +45,7 @@ public class FavouritesItem extends Activity {
 		tvItemRating = (TextView) findViewById(R.id.tvItemRating2);
 		tvItemNut = (TextView) findViewById(R.id.tvItemNut2);
 
+		userID = ((UserData) this.getApplication()).getUserID();
 		foodID = intent.getStringExtra("itemFoodID");
 		name = intent.getStringExtra("itemName");
 		canteen = intent.getStringExtra("itemCanteen");
@@ -93,8 +95,23 @@ public class FavouritesItem extends Activity {
 
 	public void itemOrder(View view) {
 		if (checkOfferingTime()) {
+			try {
 
-		} else
+				List<NameValuePair> params = new ArrayList<NameValuePair>();
+
+				params.add(new BasicNameValuePair("userID", userID));
+				params.add(new BasicNameValuePair("foodID", foodID));
+				JSONArray jArray = jsonParser.makeHttpRequest(jsonParser.URL
+						+ "order.php", params);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+			}
+			Toast.makeText(this, name + " is ordered!", Toast.LENGTH_SHORT)
+					.show();
+		} else if (offeringTime.equals("allDay"))
+			Toast.makeText(this, "Canteen is Closed!", Toast.LENGTH_SHORT)
+					.show();
+		else
 			Toast.makeText(this, "Now it is not " + offeringTime + " time!",
 					Toast.LENGTH_SHORT).show();
 	}
@@ -105,7 +122,10 @@ public class FavouritesItem extends Activity {
 					offeringTime, cuisine, price, rating, nut);
 			Toast.makeText(this, name + " is added to Order List!",
 					Toast.LENGTH_SHORT).show();
-		} else
+		} else if (offeringTime.equals("allDay"))
+			Toast.makeText(this, "Canteen is Closed!", Toast.LENGTH_SHORT)
+					.show();
+		else
 			Toast.makeText(this, "Now it is not " + offeringTime + " time!",
 					Toast.LENGTH_SHORT).show();
 

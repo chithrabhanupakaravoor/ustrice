@@ -39,5 +39,7 @@
     <string name="title_activity_favourites_item">Favourites Item</string>
     <string name="title_activity_food_order_list">Order List</string>
     <string name="title_activity_food_order_list_item">Order List Item</string>
+    <string name="title_activity_ticket">Ticket</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
