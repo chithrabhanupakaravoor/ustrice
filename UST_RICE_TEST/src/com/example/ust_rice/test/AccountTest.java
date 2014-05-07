@@ -8,7 +8,6 @@ import android.widget.ImageButton;
 import com.example.ust_rice.Account;
 import com.example.ust_rice.Favourites;
 import com.example.ust_rice.FoodMenu;
-import com.example.ust_rice.MainActivity;
 import com.example.ust_rice.Ranking;
 import com.example.ust_rice.Recommend;
 

@@ -8,12 +8,10 @@ import android.widget.ImageButton;
 import com.example.ust_rice.Account;
 import com.example.ust_rice.Favourites;
 import com.example.ust_rice.FoodMenu;
-import com.example.ust_rice.MainActivity;
 import com.example.ust_rice.Ranking;
 import com.example.ust_rice.Recommend;
 
-public class RankingTest extends
-		ActivityInstrumentationTestCase2<Ranking> {
+public class RankingTest extends ActivityInstrumentationTestCase2<Ranking> {
 
 	private Ranking mActivity;
 
@@ -71,8 +69,6 @@ public class RankingTest extends
 
 		nextActivity.finish();
 	}
-
-
 
 	public void testFavouritesButton() {
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(

@@ -5,7 +5,6 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ListView;
 
 import com.example.ust_rice.Account;
 import com.example.ust_rice.Favourites;
