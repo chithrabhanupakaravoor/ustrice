@@ -1,0 +1,40 @@
+# COMP3111 Group Meeting #
+
+
+---
+
+
+## Minutes of Extra Meeting For Prototype Presentation ##
+
+| **Date** | Mar 31, 2014 |
+|:---------|:-------------|
+| **Time** | 4 pm to 5 pm |
+| **Venue** | LG1355 HKUST Library |
+| **Attendants** | Kelvin, Seb, Lucas |
+| **Absent or leave** |  |
+| **Recorder** | Kelvin |
+
+
+---
+
+
+## Items ##
+
+**1. Confirmation of Minutes of the Last Meeting**
+> The minutes of the last meeting were approved without amendment.
+
+**2. Progress Report**
+
+| **Member** | **Task Accomplished** |
+|:-----------|:----------------------|
+| Kelvin |  |
+| Seb |  |
+| Lucas |  |
+
+**3. Discussion of Impediments and Resolution**
+
+**4. Goals For Coming Week**
+
+**5. Internal Affairs**
+
+**6. Meeting Adjournment and Next Meeting**

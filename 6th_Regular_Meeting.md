@@ -1,0 +1,40 @@
+# COMP3111 Group Meeting #
+
+
+---
+
+
+## Minutes of 6<sup>th</sup> Regular Meeting ##
+
+| **Date** | Mar 21, 2014 |
+|:---------|:-------------|
+| **Time** | 2 pm to 4 pm |
+| **Venue** | LG1355 HKUST Library |
+| **Attendants** | Kelvin, Seb, Lucas |
+| **Absent or leave** |  |
+| **Recorder** | Kelvin |
+
+
+---
+
+
+## Items ##
+
+**1. Confirmation of Minutes of the Last Meeting**
+> The minutes of the last meeting were approved without amendment.
+
+**2. Progress Report**
+
+| **Member** | **Task Accomplished** |
+|:-----------|:----------------------|
+| Kelvin |  |
+| Seb |  |
+| Lucas |  |
+
+**3. Discussion of Impediments and Resolution**
+
+**4. Goals For Coming Week**
+
+**5. Internal Affairs**
+
+**6. Meeting Adjournment and Next Meeting**
